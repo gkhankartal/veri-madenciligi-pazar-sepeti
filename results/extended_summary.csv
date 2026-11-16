@@ -1,0 +1,10 @@
+﻿baseline_rule_jaccard,itemsets,itemsets_by_length,max_len,min_support,note,removed_training_baskets,rules,seconds,section,training_baskets,training_rules,validation_eligible_rules,validation_passing_rules,variant
+,1313,"{1: 732, 2: 581}",2,0.01,,,328,1.9561800999945262,length_sensitivity,,,,,
+,1402,"{1: 732, 2: 581, 3: 89}",3,0.01,,,583,1.7853824999983772,length_sensitivity,,,,,
+,1405,"{1: 732, 2: 581, 3: 89, 4: 3}",4,0.01,,,608,1.9571501000027638,length_sensitivity,,,,,
+,331,"{1: 274, 2: 57}",2,0.02,,,61,0.5155830000003334,length_sensitivity,,,,,
+,331,"{1: 274, 2: 57}",3,0.02,,,61,0.5804950000019744,length_sensitivity,,,,,
+,331,"{1: 274, 2: 57}",4,0.02,,,61,0.4906730000002426,length_sensitivity,,,,,
+1.0,,,,,"All original validation baskets retained; denominator changes only in altered training data. This is a sensitivity study, not selection of a final preprocessing policy.",0,,,ablation,22066,61,60,47,baseline
+0.6853932584269663,,,,,"All original validation baskets retained; denominator changes only in altered training data. This is a sensitivity study, not selection of a final preprocessing policy.",1919,,,ablation,20147,89,87,68,remove_single_product_baskets
+0.5573770491803278,,,,,"All original validation baskets retained; denominator changes only in altered training data. This is a sensitivity study, not selection of a final preprocessing policy.",221,,,ablation,21845,34,34,27,remove_largest_one_percent_baskets

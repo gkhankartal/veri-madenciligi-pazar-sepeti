@@ -1,0 +1,149 @@
+{
+  "verified_on": "2026-11-03",
+  "scope_note": "Beş hakemli makale ve ayrı veri seti kaydı. Özetler kaynakların kısa açıklamalarıdır; sonuçlar proje ölçümleriyle karıştırılmamalıdır.",
+  "papers": [
+    {
+      "id": "agrawal1994",
+      "title": "Fast Algorithms for Mining Association Rules",
+      "authors": [
+        "Rakesh Agrawal",
+        "Ramakrishnan Srikant"
+      ],
+      "year": 1994,
+      "venue": "Proceedings of the 20th International Conference on Very Large Data Bases (VLDB)",
+      "volume": null,
+      "issue": null,
+      "pages": "487–499",
+      "doi": null,
+      "url": "https://www.vldb.org/conf/1994/P487.PDF",
+      "primary_sources": [
+        "https://www.vldb.org/conf/1994/P487.PDF",
+        "https://research.google/pubs/fast-algorithms-for-mining-association-rules-in-large-databases/"
+      ],
+      "method": "Apriori ve AprioriTid, sık alt kümelerden aday ürün kümeleri üretir; AprioriHybrid iki yöntemin özelliklerini birleştirir.",
+      "finding": "Yazarların deneylerinde yeni yöntemler önceki AIS ve SETM yaklaşımlarını aşmış; AprioriHybrid için ölçeklenme sonuçları sunulmuştur. Bu başarı sırası her veri ve uygulama için evrensel bir garanti değildir.",
+      "project_difference": "Bu proje AprioriHybrid geliştirmez; Python Apriori, FP-Growth ve ECLAT uygulamalarının aynı örneklemde sonuç eşitliğini ve sürelerini karşılaştırır.",
+      "peer_reviewed": true,
+      "verification_note": "Konferansın resmi PDF arşivi ve yazarın kurumsal yayın kaydı doğrulandı; bu 1994 bildirisinin DOI alanı uydurulmaması için boş bırakıldı."
+    },
+    {
+      "id": "han2000",
+      "title": "Mining Frequent Patterns without Candidate Generation",
+      "authors": [
+        "Jiawei Han",
+        "Jian Pei",
+        "Yiwen Yin"
+      ],
+      "year": 2000,
+      "venue": "ACM SIGMOD Record / SIGMOD 2000",
+      "volume": "29",
+      "issue": "2",
+      "pages": "1–12",
+      "doi": "10.1145/335191.335372",
+      "url": "https://sigmodrecord.org/2000/06/07/mining-frequent-patterns-without-candidate-generation/",
+      "primary_sources": [
+        "https://sigmodrecord.org/2000/06/07/mining-frequent-patterns-without-candidate-generation/",
+        "https://doi.org/10.1145/335191.335372",
+        "https://www.cs.sfu.ca/~jpei/publications/dami03_fpgrowth.pdf"
+      ],
+      "method": "FP-tree veriyi sıkıştırır; FP-Growth koşullu ağaçlarda örüntüyü büyüterek aday küme üretimini önler.",
+      "finding": "Çalışma, kısa ve uzun sık örüntülerin aday üretmeden çıkarılabildiğini ve deneylerindeki verimlilik avantajını gösterir. Bu projede hız sırası veri özelliklerine ve Python uygulamalarına göre yeniden ölçülür.",
+      "project_difference": "Özgün çalışmanın algoritma tasarımı yerine, gerçek perakende sepetlerinde ortak eşik ve çıktı biçimiyle uygulama düzeyinde karşılaştırma yapılır.",
+      "peer_reviewed": true,
+      "verification_note": "SIGMOD resmi yayın sayfasında başlık/yazarlar doğrulandı. 2004 genişletilmiş dergi sürümü yöntem açıklamasını destekler; 2000 bildirisi ile tek yayınmış gibi birleştirilmemelidir."
+    },
+    {
+      "id": "zaki2000",
+      "title": "Scalable Algorithms for Association Mining",
+      "authors": [
+        "Mohammed J. Zaki"
+      ],
+      "year": 2000,
+      "venue": "IEEE Transactions on Knowledge and Data Engineering",
+      "volume": "12",
+      "issue": "3",
+      "pages": "372–390",
+      "doi": "10.1109/69.846291",
+      "url": "https://www.mjzaki.com/publications/",
+      "primary_sources": [
+        "https://www.mjzaki.com/publications/",
+        "https://github.com/zakimjz/ECLAT"
+      ],
+      "method": "Dikey işlem-kimliği listeleri ve kafes arama uzayının ayrıştırılması, sık ürün kümelerinin kesişimlerle aranmasını sağlar.",
+      "finding": "Makale farklı veri yerleşimleri ve arama stratejilerini deneysel olarak karşılaştırır; yapısal özelliklerden yararlanmanın işlem maliyetini azaltabildiğini gösterir.",
+      "project_difference": "Projede şeffaf bir Python küme-kesişimi ECLAT uygulaması kullanılır. Bu uygulama özgün optimize kodla aynı performans iddiasında bulunmaz; doğruluk diğer algoritmalarla denetlenir.",
+      "peer_reviewed": true,
+      "verification_note": "Yazarın birincil yayın listesinde dergi, sayfa aralığı, yıl ve DOI doğrulandı; bağlantı verilen ECLAT deposu yazarın kendi deposudur."
+    },
+    {
+      "id": "hahsler2005",
+      "title": "arules - A Computational Environment for Mining Association Rules and Frequent Item Sets",
+      "authors": [
+        "Michael Hahsler",
+        "Bettina Grün",
+        "Kurt Hornik"
+      ],
+      "year": 2005,
+      "venue": "Journal of Statistical Software",
+      "volume": "14",
+      "issue": "15",
+      "pages": "1–25",
+      "doi": "10.18637/jss.v014.i15",
+      "url": "https://www.jstatsoft.org/article/view/v014i15",
+      "primary_sources": [
+        "https://www.jstatsoft.org/article/view/v014i15",
+        "https://www.jstatsoft.org/citationstylelanguage/get/vancouver?publicationId=1463&submissionId=1464"
+      ],
+      "method": "R arules paketi işlem verisini temsil etme, sık kümeleri ve kuralları işleme altyapısı sunar; Apriori ve ECLAT uygulamalarına arayüz sağlar.",
+      "finding": "Çalışmanın çıktısı, sık/kapalı/maksimal ürün kümeleri ve ilişki kuralları üzerinde çalışılabilen bütünleşik bir yazılım altyapısıdır; tahmin doğruluğunda üstünlük iddiası olarak kullanılmaz.",
+      "project_difference": "Bu projede R yerine Python kullanılır. Altyapı fikri, ortak veri temsili ve ortak kural metrikleriyle algoritmaların karşılaştırılmasına yol gösterir.",
+      "peer_reviewed": true,
+      "verification_note": "Resmi dergi sayfasında özet, yazarlar, yayın tarihi ve DOI; resmi alıntı çıktısında 1–25 sayfa aralığı doğrulandı."
+    },
+    {
+      "id": "hahsler2007",
+      "title": "New Probabilistic Interest Measures for Association Rules",
+      "authors": [
+        "Michael Hahsler",
+        "Kurt Hornik"
+      ],
+      "year": 2007,
+      "venue": "Intelligent Data Analysis",
+      "volume": "11",
+      "issue": "5",
+      "pages": "437–455",
+      "doi": "10.3233/IDA-2007-11502",
+      "url": "https://research.wu.ac.at/en/publications/new-probabilistic-interest-measures-for-association-rules-21/",
+      "primary_sources": [
+        "https://research.wu.ac.at/en/publications/new-probabilistic-interest-measures-for-association-rules-21/",
+        "https://michael.hahsler.net/research/paper/hyperConfidence_IDA2007.pdf",
+        "https://michael.hahsler.net/publications/"
+      ],
+      "method": "Bağımsızlık altında işlem verisi modeli kurulur; sentetik veri ve gerçek market verisiyle güven/lift incelenir, hyper-lift ve hyper-confidence önerilir.",
+      "finding": "Yazarların incelemesi, yüksek lift veya güvenin tek başına rastlantısal kuralları güvenilir biçimde elemediğini gösterir. Yeni ölçüler özellikle sahte ilişkilerin sorun olduğu senaryolarda daha iyi filtreleme sağlar.",
+      "project_difference": "Projede zorunlu lift ve conviction korunur; zaman dışı değerlendirme ve belirsizlik incelemesiyle güçlü görünen kuralların dayanıklılığı ayrıca kontrol edilir. Yüksek lift nedensellik kanıtı sayılmaz.",
+      "peer_reviewed": true,
+      "verification_note": "Üniversite kaydı açıkça peer-review journal article olarak işaretler. DOI yazarın yayın listesindeki DOI bağlantısında doğrulandı; 2006 teknik rapor ve 2008 arXiv yüklemesi yerine 2007 hakemli sürüm atıf alınır."
+    }
+  ],
+  "dataset": {
+    "name": "Online Retail II",
+    "uci_id": 502,
+    "creator": "Daqing Chen",
+    "year": 2012,
+    "doi": "10.24432/C5CG6D",
+    "url": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+    "download_url": "https://archive.ics.uci.edu/static/public/502/online%2Bretail%2Bii.zip",
+    "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "citation": "Chen, D. (2012). Online Retail II [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5CG6D.",
+    "source_rows": 1067371,
+    "source_columns": 8,
+    "period": "2009-12-01 – 2011-12-09",
+    "unit": "Fatura–ürün satırı; bu sayı benzersiz fatura veya müşteri sayısı değildir.",
+    "business_context": "Birleşik Krallık merkezli çevrimiçi hediyelik eşya perakendecisi; müşterilerin bir bölümü toptancıdır.",
+    "verification_note": "Resmi UCI kaynağında veri kimliği, DOI, lisans ve atıf bilgisi doğrulanmıştır. Resmi arşivden indirilen çalışma kitabının SHA-256 değeri ölçümlerde kullanılan dosyayla eşleşmektedir.",
+    "distinction": "UCI 352 Online Retail ile karıştırılmamalıdır; bu projede iki yıllık UCI 502 Online Retail II kullanılır.",
+    "workbook_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980"
+  }
+}

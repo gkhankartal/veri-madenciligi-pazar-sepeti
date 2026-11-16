@@ -1,0 +1,1536 @@
+{
+  "seed": 7017,
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "sample_fingerprint": "b11b2be8dd3b9ecac1d4feee94e0a096c15a88f9dd6cc53760613d94a0f92670",
+  "protocol": "All thresholds and variants are specified in code; training rules define later-period evaluation. No variant is selected using test metrics. Previously inspected test is an exploratory temporal check, not a new external holdout.",
+  "length_sensitivity": [
+    {
+      "min_support": 0.01,
+      "max_len": 2,
+      "itemsets": 1313,
+      "itemsets_by_length": {
+        "1": 732,
+        "2": 581
+      },
+      "rules": 328,
+      "seconds": 1.9561800999945262
+    },
+    {
+      "min_support": 0.01,
+      "max_len": 3,
+      "itemsets": 1402,
+      "itemsets_by_length": {
+        "1": 732,
+        "2": 581,
+        "3": 89
+      },
+      "rules": 583,
+      "seconds": 1.7853824999983772
+    },
+    {
+      "min_support": 0.01,
+      "max_len": 4,
+      "itemsets": 1405,
+      "itemsets_by_length": {
+        "1": 732,
+        "2": 581,
+        "3": 89,
+        "4": 3
+      },
+      "rules": 608,
+      "seconds": 1.9571501000027638
+    },
+    {
+      "min_support": 0.02,
+      "max_len": 2,
+      "itemsets": 331,
+      "itemsets_by_length": {
+        "1": 274,
+        "2": 57
+      },
+      "rules": 61,
+      "seconds": 0.5155830000003334
+    },
+    {
+      "min_support": 0.02,
+      "max_len": 3,
+      "itemsets": 331,
+      "itemsets_by_length": {
+        "1": 274,
+        "2": 57
+      },
+      "rules": 61,
+      "seconds": 0.5804950000019744
+    },
+    {
+      "min_support": 0.02,
+      "max_len": 4,
+      "itemsets": 331,
+      "itemsets_by_length": {
+        "1": 274,
+        "2": 57
+      },
+      "rules": 61,
+      "seconds": 0.4906730000002426
+    }
+  ],
+  "ablation": [
+    {
+      "variant": "baseline",
+      "training_baskets": 22066,
+      "removed_training_baskets": 0,
+      "training_rules": 61,
+      "baseline_rule_jaccard": 1.0,
+      "validation_eligible_rules": 60,
+      "validation_passing_rules": 47,
+      "note": "All original validation baskets retained; denominator changes only in altered training data. This is a sensitivity study, not selection of a final preprocessing policy."
+    },
+    {
+      "variant": "remove_single_product_baskets",
+      "training_baskets": 20147,
+      "removed_training_baskets": 1919,
+      "training_rules": 89,
+      "baseline_rule_jaccard": 0.6853932584269663,
+      "validation_eligible_rules": 87,
+      "validation_passing_rules": 68,
+      "note": "All original validation baskets retained; denominator changes only in altered training data. This is a sensitivity study, not selection of a final preprocessing policy."
+    },
+    {
+      "variant": "remove_largest_one_percent_baskets",
+      "training_baskets": 21845,
+      "removed_training_baskets": 221,
+      "training_rules": 34,
+      "baseline_rule_jaccard": 0.5573770491803278,
+      "validation_eligible_rules": 34,
+      "validation_passing_rules": 27,
+      "note": "All original validation baskets retained; denominator changes only in altered training data. This is a sensitivity study, not selection of a final preprocessing policy."
+    }
+  ],
+  "unsuccessful_experiments": [
+    {
+      "name": "Minimum support 10%",
+      "reason_tried": "Prefer common, well-supported cross-sell patterns.",
+      "actual": {
+        "itemsets": 2,
+        "rules": 0
+      },
+      "outcome": "No actionable cross-sell rules under this training-only threshold.",
+      "is_failed_for_cross_sell_objective": true
+    },
+    {
+      "name": "Minimum confidence 100%",
+      "reason_tried": "Seek perfectly reliable training associations.",
+      "actual": {
+        "rules": 0
+      },
+      "outcome": "No rules survive; perfect training confidence is too restrictive at support >= 2%.",
+      "is_failed_for_cross_sell_objective": true
+    }
+  ],
+  "redundancy_filter": {
+    "min_support": 0.01,
+    "max_len": 4,
+    "before": 608,
+    "after": 607,
+    "removed": 1,
+    "definition": "A longer antecedent is redundant if a subset has equal/higher confidence.\n\n    The consequent is identical. Opposite directions are NOT duplicates. The\n    decision uses training metrics only; it is a concise presentation heuristic,\n    not an assurance of equal future recommendation performance.\n    ",
+    "examples": [
+      {
+        "rule": {
+          "antecedent": [
+            "21755",
+            "85123A"
+          ],
+          "consequent": [
+            "21754"
+          ],
+          "support": 0.01078582434514638,
+          "confidence": 0.4887063655030801,
+          "lift": 7.6156741957563305,
+          "conviction": 1.8303159160706999,
+          "conviction_infinite": false,
+          "joint_count": 238
+        },
+        "dominated_by": {
+          "antecedent": [
+            "21755"
+          ],
+          "consequent": [
+            "21754"
+          ],
+          "support": 0.02818816278437415,
+          "confidence": 0.5325342465753424,
+          "lift": 8.298658675799086,
+          "conviction": 2.0019196489784723,
+          "conviction_infinite": false,
+          "joint_count": 622
+        }
+      }
+    ]
+  },
+  "temporal_summary": {
+    "train": {
+      "invoices": 22066,
+      "eligible_rules": 61,
+      "passing_rules": 61,
+      "evaluated_rules": 61,
+      "mean_confidence": 0.5191118809097289,
+      "mean_lift": 8.775996966084689
+    },
+    "validation": {
+      "invoices": 7345,
+      "eligible_rules": 60,
+      "passing_rules": 47,
+      "evaluated_rules": 61,
+      "mean_confidence": 0.49262244932925253,
+      "mean_lift": 9.037173999699581
+    },
+    "test": {
+      "invoices": 7413,
+      "eligible_rules": 61,
+      "passing_rules": 50,
+      "evaluated_rules": 61,
+      "mean_confidence": 0.5051834525974286,
+      "mean_lift": 10.534740117494453
+    }
+  },
+  "monthly_selected_rules": [
+    {
+      "month": "2009-12",
+      "invoices": 1568,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 53,
+      "joint_count": 37,
+      "support": 0.023596938775510203,
+      "confidence": 0.6981132075471698,
+      "lift": 17.944942777605938
+    },
+    {
+      "month": "2009-12",
+      "invoices": 1568,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 61,
+      "joint_count": 37,
+      "support": 0.023596938775510203,
+      "confidence": 0.6065573770491803,
+      "lift": 17.944942777605938
+    },
+    {
+      "month": "2009-12",
+      "invoices": 1568,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 63,
+      "joint_count": 40,
+      "support": 0.025510204081632654,
+      "confidence": 0.6349206349206349,
+      "lift": 15.084175084175085
+    },
+    {
+      "month": "2010-01",
+      "invoices": 977,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 39,
+      "joint_count": 29,
+      "support": 0.02968270214943705,
+      "confidence": 0.7435897435897436,
+      "lift": 16.895050685748362
+    },
+    {
+      "month": "2010-01",
+      "invoices": 977,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 43,
+      "joint_count": 29,
+      "support": 0.02968270214943705,
+      "confidence": 0.6744186046511628,
+      "lift": 16.89505068574836
+    },
+    {
+      "month": "2010-01",
+      "invoices": 977,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 60,
+      "joint_count": 37,
+      "support": 0.037871033776867964,
+      "confidence": 0.6166666666666667,
+      "lift": 10.954242424242425
+    },
+    {
+      "month": "2010-02",
+      "invoices": 1109,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 45,
+      "joint_count": 27,
+      "support": 0.024346257889990983,
+      "confidence": 0.6,
+      "lift": 17.510526315789473
+    },
+    {
+      "month": "2010-02",
+      "invoices": 1109,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 38,
+      "joint_count": 27,
+      "support": 0.024346257889990983,
+      "confidence": 0.7105263157894737,
+      "lift": 17.510526315789473
+    },
+    {
+      "month": "2010-02",
+      "invoices": 1109,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 45,
+      "joint_count": 24,
+      "support": 0.02164111812443643,
+      "confidence": 0.5333333333333333,
+      "lift": 10.753939393939394
+    },
+    {
+      "month": "2010-03",
+      "invoices": 1540,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 49,
+      "joint_count": 0,
+      "support": 0.0,
+      "confidence": 0.0,
+      "lift": null
+    },
+    {
+      "month": "2010-03",
+      "invoices": 1540,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 0,
+      "joint_count": 0,
+      "support": 0.0,
+      "confidence": null,
+      "lift": null
+    },
+    {
+      "month": "2010-03",
+      "invoices": 1540,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 66,
+      "joint_count": 41,
+      "support": 0.026623376623376622,
+      "confidence": 0.6212121212121212,
+      "lift": 14.068627450980392
+    },
+    {
+      "month": "2010-04",
+      "invoices": 1353,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 44,
+      "joint_count": 28,
+      "support": 0.020694752402069475,
+      "confidence": 0.6363636363636364,
+      "lift": 18.717391304347828
+    },
+    {
+      "month": "2010-04",
+      "invoices": 1353,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 46,
+      "joint_count": 28,
+      "support": 0.020694752402069475,
+      "confidence": 0.6086956521739131,
+      "lift": 18.717391304347824
+    },
+    {
+      "month": "2010-04",
+      "invoices": 1353,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 66,
+      "joint_count": 49,
+      "support": 0.03621581670362158,
+      "confidence": 0.7424242424242424,
+      "lift": 13.045454545454547
+    },
+    {
+      "month": "2010-05",
+      "invoices": 1388,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 47,
+      "joint_count": 37,
+      "support": 0.026657060518731988,
+      "confidence": 0.7872340425531915,
+      "lift": 19.866924564796907
+    },
+    {
+      "month": "2010-05",
+      "invoices": 1388,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 55,
+      "joint_count": 37,
+      "support": 0.026657060518731988,
+      "confidence": 0.6727272727272727,
+      "lift": 19.866924564796907
+    },
+    {
+      "month": "2010-05",
+      "invoices": 1388,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 74,
+      "joint_count": 43,
+      "support": 0.030979827089337175,
+      "confidence": 0.581081081081081,
+      "lift": 9.717355910126994
+    },
+    {
+      "month": "2010-06",
+      "invoices": 1506,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 58,
+      "joint_count": 43,
+      "support": 0.028552456839309428,
+      "confidence": 0.7413793103448276,
+      "lift": 19.9378078817734
+    },
+    {
+      "month": "2010-06",
+      "invoices": 1506,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 56,
+      "joint_count": 43,
+      "support": 0.028552456839309428,
+      "confidence": 0.7678571428571429,
+      "lift": 19.9378078817734
+    },
+    {
+      "month": "2010-06",
+      "invoices": 1506,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 86,
+      "joint_count": 55,
+      "support": 0.03652058432934927,
+      "confidence": 0.6395348837209303,
+      "lift": 9.82795443758899
+    },
+    {
+      "month": "2010-07",
+      "invoices": 1399,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 40,
+      "joint_count": 29,
+      "support": 0.020729092208720514,
+      "confidence": 0.725,
+      "lift": 24.149404761904762
+    },
+    {
+      "month": "2010-07",
+      "invoices": 1399,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 42,
+      "joint_count": 29,
+      "support": 0.020729092208720514,
+      "confidence": 0.6904761904761905,
+      "lift": 24.149404761904762
+    },
+    {
+      "month": "2010-07",
+      "invoices": 1399,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 52,
+      "joint_count": 39,
+      "support": 0.027877055039313797,
+      "confidence": 0.75,
+      "lift": 12.344117647058823
+    },
+    {
+      "month": "2010-08",
+      "invoices": 1316,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 25,
+      "joint_count": 20,
+      "support": 0.015197568389057751,
+      "confidence": 0.8,
+      "lift": 30.96470588235294
+    },
+    {
+      "month": "2010-08",
+      "invoices": 1316,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 34,
+      "joint_count": 20,
+      "support": 0.015197568389057751,
+      "confidence": 0.5882352941176471,
+      "lift": 30.964705882352945
+    },
+    {
+      "month": "2010-08",
+      "invoices": 1316,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 56,
+      "joint_count": 35,
+      "support": 0.026595744680851064,
+      "confidence": 0.625,
+      "lift": 12.8515625
+    },
+    {
+      "month": "2010-09",
+      "invoices": 1691,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 48,
+      "joint_count": 38,
+      "support": 0.02247191011235955,
+      "confidence": 0.7916666666666666,
+      "lift": 26.249183006535944
+    },
+    {
+      "month": "2010-09",
+      "invoices": 1691,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 51,
+      "joint_count": 38,
+      "support": 0.02247191011235955,
+      "confidence": 0.7450980392156863,
+      "lift": 26.249183006535947
+    },
+    {
+      "month": "2010-09",
+      "invoices": 1691,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 72,
+      "joint_count": 46,
+      "support": 0.027202838557066823,
+      "confidence": 0.6388888888888888,
+      "lift": 13.01639892904953
+    },
+    {
+      "month": "2010-10",
+      "invoices": 2117,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 65,
+      "joint_count": 48,
+      "support": 0.02267359470949457,
+      "confidence": 0.7384615384615385,
+      "lift": 22.990045248868782
+    },
+    {
+      "month": "2010-10",
+      "invoices": 2117,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 68,
+      "joint_count": 48,
+      "support": 0.02267359470949457,
+      "confidence": 0.7058823529411765,
+      "lift": 22.99004524886878
+    },
+    {
+      "month": "2010-10",
+      "invoices": 2117,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 62,
+      "joint_count": 44,
+      "support": 0.020784128483703354,
+      "confidence": 0.7096774193548387,
+      "lift": 17.885560675883255
+    },
+    {
+      "month": "2010-11",
+      "invoices": 2516,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 62,
+      "joint_count": 47,
+      "support": 0.018680445151033388,
+      "confidence": 0.7580645161290323,
+      "lift": 23.841129032258067
+    },
+    {
+      "month": "2010-11",
+      "invoices": 2516,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 80,
+      "joint_count": 47,
+      "support": 0.018680445151033388,
+      "confidence": 0.5875,
+      "lift": 23.841129032258067
+    },
+    {
+      "month": "2010-11",
+      "invoices": 2516,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 88,
+      "joint_count": 66,
+      "support": 0.026232114467408585,
+      "confidence": 0.75,
+      "lift": 15.725
+    },
+    {
+      "month": "2010-12",
+      "invoices": 1444,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 30,
+      "joint_count": 20,
+      "support": 0.013850415512465374,
+      "confidence": 0.6666666666666666,
+      "lift": 26.018018018018015
+    },
+    {
+      "month": "2010-12",
+      "invoices": 1444,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 37,
+      "joint_count": 20,
+      "support": 0.013850415512465374,
+      "confidence": 0.5405405405405406,
+      "lift": 26.01801801801802
+    },
+    {
+      "month": "2010-12",
+      "invoices": 1444,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 39,
+      "joint_count": 30,
+      "support": 0.02077562326869806,
+      "confidence": 0.7692307692307693,
+      "lift": 21.77978883861237
+    },
+    {
+      "month": "2011-01",
+      "invoices": 991,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 39,
+      "joint_count": 29,
+      "support": 0.029263370332996974,
+      "confidence": 0.7435897435897436,
+      "lift": 17.97310819262039
+    },
+    {
+      "month": "2011-01",
+      "invoices": 991,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 41,
+      "joint_count": 29,
+      "support": 0.029263370332996974,
+      "confidence": 0.7073170731707317,
+      "lift": 17.973108192620387
+    },
+    {
+      "month": "2011-01",
+      "invoices": 991,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 52,
+      "joint_count": 29,
+      "support": 0.029263370332996974,
+      "confidence": 0.5576923076923077,
+      "lift": 9.528846153846153
+    },
+    {
+      "month": "2011-02",
+      "invoices": 1004,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 26,
+      "joint_count": 20,
+      "support": 0.0199203187250996,
+      "confidence": 0.7692307692307693,
+      "lift": 22.714932126696837
+    },
+    {
+      "month": "2011-02",
+      "invoices": 1004,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 34,
+      "joint_count": 20,
+      "support": 0.0199203187250996,
+      "confidence": 0.5882352941176471,
+      "lift": 22.714932126696834
+    },
+    {
+      "month": "2011-02",
+      "invoices": 1004,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 46,
+      "joint_count": 29,
+      "support": 0.02888446215139442,
+      "confidence": 0.6304347826086957,
+      "lift": 12.917480035492458
+    },
+    {
+      "month": "2011-03",
+      "invoices": 1339,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 8,
+      "joint_count": 4,
+      "support": 0.002987303958177745,
+      "confidence": 0.5,
+      "lift": 20.921875
+    },
+    {
+      "month": "2011-03",
+      "invoices": 1339,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 32,
+      "joint_count": 4,
+      "support": 0.002987303958177745,
+      "confidence": 0.125,
+      "lift": 20.921875
+    },
+    {
+      "month": "2011-03",
+      "invoices": 1339,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 56,
+      "joint_count": 35,
+      "support": 0.026138909634055265,
+      "confidence": 0.625,
+      "lift": 11.955357142857142
+    },
+    {
+      "month": "2011-04",
+      "invoices": 1149,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 16,
+      "joint_count": 10,
+      "support": 0.008703220191470844,
+      "confidence": 0.625,
+      "lift": 29.921875
+    },
+    {
+      "month": "2011-04",
+      "invoices": 1149,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 24,
+      "joint_count": 10,
+      "support": 0.008703220191470844,
+      "confidence": 0.4166666666666667,
+      "lift": 29.921875000000004
+    },
+    {
+      "month": "2011-04",
+      "invoices": 1149,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 42,
+      "joint_count": 35,
+      "support": 0.030461270670147953,
+      "confidence": 0.8333333333333334,
+      "lift": 15.443548387096774
+    },
+    {
+      "month": "2011-05",
+      "invoices": 1559,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 28,
+      "joint_count": 17,
+      "support": 0.010904425914047467,
+      "confidence": 0.6071428571428571,
+      "lift": 30.533410138248843
+    },
+    {
+      "month": "2011-05",
+      "invoices": 1559,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 31,
+      "joint_count": 17,
+      "support": 0.010904425914047467,
+      "confidence": 0.5483870967741935,
+      "lift": 30.533410138248843
+    },
+    {
+      "month": "2011-05",
+      "invoices": 1559,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 37,
+      "joint_count": 29,
+      "support": 0.01860166773572803,
+      "confidence": 0.7837837837837838,
+      "lift": 16.512417823228635
+    },
+    {
+      "month": "2011-06",
+      "invoices": 1416,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 21,
+      "joint_count": 17,
+      "support": 0.012005649717514125,
+      "confidence": 0.8095238095238095,
+      "lift": 36.97695852534562
+    },
+    {
+      "month": "2011-06",
+      "invoices": 1416,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 31,
+      "joint_count": 17,
+      "support": 0.012005649717514125,
+      "confidence": 0.5483870967741935,
+      "lift": 36.976958525345616
+    },
+    {
+      "month": "2011-06",
+      "invoices": 1416,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 62,
+      "joint_count": 44,
+      "support": 0.031073446327683617,
+      "confidence": 0.7096774193548387,
+      "lift": 12.254917387883557
+    },
+    {
+      "month": "2011-07",
+      "invoices": 1345,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 22,
+      "joint_count": 16,
+      "support": 0.011895910780669145,
+      "confidence": 0.7272727272727273,
+      "lift": 34.935064935064936
+    },
+    {
+      "month": "2011-07",
+      "invoices": 1345,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 28,
+      "joint_count": 16,
+      "support": 0.011895910780669145,
+      "confidence": 0.5714285714285714,
+      "lift": 34.935064935064936
+    },
+    {
+      "month": "2011-07",
+      "invoices": 1345,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 60,
+      "joint_count": 38,
+      "support": 0.02825278810408922,
+      "confidence": 0.6333333333333333,
+      "lift": 10.647916666666667
+    },
+    {
+      "month": "2011-08",
+      "invoices": 1248,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 19,
+      "joint_count": 14,
+      "support": 0.011217948717948718,
+      "confidence": 0.7368421052631579,
+      "lift": 32.84210526315789
+    },
+    {
+      "month": "2011-08",
+      "invoices": 1248,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 28,
+      "joint_count": 14,
+      "support": 0.011217948717948718,
+      "confidence": 0.5,
+      "lift": 32.8421052631579
+    },
+    {
+      "month": "2011-08",
+      "invoices": 1248,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 57,
+      "joint_count": 36,
+      "support": 0.028846153846153848,
+      "confidence": 0.631578947368421,
+      "lift": 9.977348434377081
+    },
+    {
+      "month": "2011-09",
+      "invoices": 1696,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 22,
+      "joint_count": 19,
+      "support": 0.011202830188679245,
+      "confidence": 0.8636363636363636,
+      "lift": 40.68686868686869
+    },
+    {
+      "month": "2011-09",
+      "invoices": 1696,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 36,
+      "joint_count": 19,
+      "support": 0.011202830188679245,
+      "confidence": 0.5277777777777778,
+      "lift": 40.686868686868685
+    },
+    {
+      "month": "2011-09",
+      "invoices": 1696,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 73,
+      "joint_count": 47,
+      "support": 0.027712264150943397,
+      "confidence": 0.6438356164383562,
+      "lift": 10.205095378312635
+    },
+    {
+      "month": "2011-10",
+      "invoices": 1866,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 34,
+      "joint_count": 23,
+      "support": 0.01232583065380493,
+      "confidence": 0.6764705882352942,
+      "lift": 27.44117647058824
+    },
+    {
+      "month": "2011-10",
+      "invoices": 1866,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 46,
+      "joint_count": 23,
+      "support": 0.01232583065380493,
+      "confidence": 0.5,
+      "lift": 27.441176470588236
+    },
+    {
+      "month": "2011-10",
+      "invoices": 1866,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 63,
+      "joint_count": 49,
+      "support": 0.026259378349410504,
+      "confidence": 0.7777777777777778,
+      "lift": 13.314984709480122
+    },
+    {
+      "month": "2011-11",
+      "invoices": 2544,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 32,
+      "joint_count": 26,
+      "support": 0.010220125786163521,
+      "confidence": 0.8125,
+      "lift": 40.529411764705884
+    },
+    {
+      "month": "2011-11",
+      "invoices": 2544,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 51,
+      "joint_count": 26,
+      "support": 0.010220125786163521,
+      "confidence": 0.5098039215686274,
+      "lift": 40.52941176470588
+    },
+    {
+      "month": "2011-11",
+      "invoices": 2544,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 89,
+      "joint_count": 72,
+      "support": 0.02830188679245283,
+      "confidence": 0.8089887640449438,
+      "lift": 17.741960480433942
+    },
+    {
+      "month": "2011-12",
+      "invoices": 743,
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 8,
+      "joint_count": 8,
+      "support": 0.010767160161507403,
+      "confidence": 1.0,
+      "lift": 46.4375
+    },
+    {
+      "month": "2011-12",
+      "invoices": 743,
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 16,
+      "joint_count": 8,
+      "support": 0.010767160161507403,
+      "confidence": 0.5,
+      "lift": 46.4375
+    },
+    {
+      "month": "2011-12",
+      "invoices": 743,
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 16,
+      "joint_count": 14,
+      "support": 0.018842530282637954,
+      "confidence": 0.875,
+      "lift": 25.004807692307693
+    }
+  ],
+  "bootstrap_validation": {
+    "weeks": 25,
+    "block_weeks": 4,
+    "repetitions": 1000,
+    "method": "circular moving-block bootstrap of weekly aggregate counts; 4 adjacent weeks per block",
+    "limitation": "Sensitivity interval, not a causal or fully calibrated inferential guarantee. Blocks approximate temporal dependence; repeated-customer dependence is not explicitly modeled. Circular wrap joins period endpoints. Test was previously inspected.",
+    "rules": [
+      {
+        "antecedent": [
+          "84997C"
+        ],
+        "consequent": [
+          "84997D"
+        ],
+        "support": {
+          "estimate": 0.009530292716133424,
+          "percentile_95": [
+            0.006540488803770307,
+            0.011845707873558254
+          ],
+          "finite_replicates": 1000
+        },
+        "confidence": {
+          "estimate": 0.6862745098039216,
+          "percentile_95": [
+            0.613820973934128,
+            0.7582512315270935
+          ],
+          "finite_replicates": 1000
+        },
+        "lift": {
+          "estimate": 32.10628200324716,
+          "percentile_95": [
+            27.631999461420005,
+            36.87857362208375
+          ],
+          "finite_replicates": 1000
+        }
+      },
+      {
+        "antecedent": [
+          "84997D"
+        ],
+        "consequent": [
+          "84997C"
+        ],
+        "support": {
+          "estimate": 0.009530292716133424,
+          "percentile_95": [
+            0.006540488803770307,
+            0.011845707873558254
+          ],
+          "finite_replicates": 1000
+        },
+        "confidence": {
+          "estimate": 0.445859872611465,
+          "percentile_95": [
+            0.28328592814371256,
+            0.564296218487395
+          ],
+          "finite_replicates": 1000
+        },
+        "lift": {
+          "estimate": 32.10628200324716,
+          "percentile_95": [
+            27.631999461420005,
+            36.87857362208375
+          ],
+          "finite_replicates": 1000
+        }
+      },
+      {
+        "antecedent": [
+          "22356"
+        ],
+        "consequent": [
+          "20724"
+        ],
+        "support": {
+          "estimate": 0.026412525527569775,
+          "percentile_95": [
+            0.023255123369069798,
+            0.0292696406329271
+          ],
+          "finite_replicates": 1000
+        },
+        "confidence": {
+          "estimate": 0.6953405017921147,
+          "percentile_95": [
+            0.6322967321532775,
+            0.7622678308577546
+          ],
+          "finite_replicates": 1000
+        },
+        "lift": {
+          "estimate": 12.61055798929156,
+          "percentile_95": [
+            10.822264708509309,
+            14.504323414899407
+          ],
+          "finite_replicates": 1000
+        }
+      }
+    ]
+  },
+  "bootstrap_test": {
+    "weeks": 17,
+    "block_weeks": 4,
+    "repetitions": 1000,
+    "method": "circular moving-block bootstrap of weekly aggregate counts; 4 adjacent weeks per block",
+    "limitation": "Sensitivity interval, not a causal or fully calibrated inferential guarantee. Blocks approximate temporal dependence; repeated-customer dependence is not explicitly modeled. Circular wrap joins period endpoints. Test was previously inspected.",
+    "rules": [
+      {
+        "antecedent": [
+          "84997C"
+        ],
+        "consequent": [
+          "84997D"
+        ],
+        "support": {
+          "estimate": 0.01119654660731148,
+          "percentile_95": [
+            0.009963574869857545,
+            0.01232949709601275
+          ],
+          "finite_replicates": 1000
+        },
+        "confidence": {
+          "estimate": 0.7757009345794392,
+          "percentile_95": [
+            0.7105050933786078,
+            0.8349867608120035
+          ],
+          "finite_replicates": 1000
+        },
+        "lift": {
+          "estimate": 35.06262821974014,
+          "percentile_95": [
+            30.5261275603394,
+            39.53233550220722
+          ],
+          "finite_replicates": 1000
+        }
+      },
+      {
+        "antecedent": [
+          "84997D"
+        ],
+        "consequent": [
+          "84997C"
+        ],
+        "support": {
+          "estimate": 0.01119654660731148,
+          "percentile_95": [
+            0.009963574869857545,
+            0.01232949709601275
+          ],
+          "finite_replicates": 1000
+        },
+        "confidence": {
+          "estimate": 0.5060975609756098,
+          "percentile_95": [
+            0.45504341164453527,
+            0.5555729166666666
+          ],
+          "finite_replicates": 1000
+        },
+        "lift": {
+          "estimate": 35.06262821974014,
+          "percentile_95": [
+            30.5261275603394,
+            39.53233550220722
+          ],
+          "finite_replicates": 1000
+        }
+      },
+      {
+        "antecedent": [
+          "22356"
+        ],
+        "consequent": [
+          "20724"
+        ],
+        "support": {
+          "estimate": 0.027384324834749764,
+          "percentile_95": [
+            0.025071802697010495,
+            0.03034946773724749
+          ],
+          "finite_replicates": 1000
+        },
+        "confidence": {
+          "estimate": 0.7546468401486989,
+          "percentile_95": [
+            0.6937820082276887,
+            0.8139813634915578
+          ],
+          "finite_replicates": 1000
+        },
+        "lift": {
+          "estimate": 14.126760166722992,
+          "percentile_95": [
+            11.073545279569649,
+            17.633662175915905
+          ],
+          "finite_replicates": 1000
+        }
+      }
+    ]
+  },
+  "selected_rule_basis": "Top three training lift-ranked rules at support >= 2%, confidence >= 40%, lift > 1. Reciprocal directions retained.",
+  "metric_note": "Algorithm itemsets are identical at matching settings: quality differences are not attributed to Apriori/FP-Growth/ECLAT. Runtime measurements are implementation and environment dependent."
+}

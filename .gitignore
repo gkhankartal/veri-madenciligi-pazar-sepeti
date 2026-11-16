@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+work/
+*.xlsx
+*.xls
+*.zip
+*.aux
+*.log
+*.out
+*.xdv
+*.toc

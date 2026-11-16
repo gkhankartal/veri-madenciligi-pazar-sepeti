@@ -1,0 +1,60 @@
+{
+  "seed": 7017,
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "audit": {
+    "source_raw_rows": 1067371,
+    "raw_rows": 992390,
+    "retained_rows": 945088,
+    "excluded_nonmerchandise_rows": 3962,
+    "cancelled_or_nonpositive": 23330,
+    "outside_invoice_sample_rows": 74981,
+    "cross_sheet_duplicates": 20010
+  },
+  "missing_after_overlap": {
+    "Customer ID": 217934,
+    "Description": 4002
+  },
+  "excluded_codes": {
+    "POST": 1744,
+    "DOT": 1312,
+    "M": 807,
+    "BANK CHARGES": 33,
+    "PADS": 15,
+    "ADJUST": 35,
+    "m": 5,
+    "D": 5,
+    "S": 3,
+    "AMAZONFEE": 3
+  },
+  "splits": {
+    "train": {
+      "invoices": 22066,
+      "date_min": "2009-12-01T07:45:00",
+      "date_max": "2011-03-03T19:21:00"
+    },
+    "validation": {
+      "invoices": 7345,
+      "date_min": "2011-03-04T08:10:00",
+      "date_max": "2011-08-17T20:02:00"
+    },
+    "test": {
+      "invoices": 7413,
+      "date_min": "2011-08-18T06:20:00",
+      "date_max": "2011-12-09T12:50:00"
+    }
+  },
+  "sampling": {
+    "unit": "invoice",
+    "requested_n": 50000,
+    "seed": 7017,
+    "stage": "raw invoice identifiers before cleaning; all rows of each selected invoice retained",
+    "population_invoices": 53628,
+    "sampled_invoices": 50000,
+    "selected_source_rows": 992390,
+    "method": "pandas.Series.drop_duplicates source encounter order; sample(n=50000, random_state=7017)",
+    "selected_invoice_sha256": "b11b2be8dd3b9ecac1d4feee94e0a096c15a88f9dd6cc53760613d94a0f92670",
+    "assignment_reference": "PDF section 8.1, page 5; supersedes generic 80% sampling on page 1",
+    "eligible_invoices_after_cleaning": 36824
+  },
+  "special_code_exclusions": "Predefined transaction/service code exclusions are listed in excluded_codes; basket-removal sensitivity is evaluated separately"
+}

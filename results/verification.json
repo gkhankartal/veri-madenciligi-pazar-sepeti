@@ -1,0 +1,331 @@
+{
+  "status": "checks_passed",
+  "mode": "existing_pdf_and_sources",
+  "checks": [
+    {
+      "name": "seed",
+      "passed": true,
+      "detail": {
+        "sampling": 7017,
+        "mining": 7017
+      }
+    },
+    {
+      "name": "invoice_sampling",
+      "passed": true,
+      "detail": {
+        "unit": "invoice",
+        "sampled": 50000,
+        "population": 53628
+      }
+    },
+    {
+      "name": "source_row_reconciliation",
+      "passed": true,
+      "detail": 1067371
+    },
+    {
+      "name": "cleaning_reconciliation",
+      "passed": true,
+      "detail": {
+        "source_raw_rows": 1067371,
+        "raw_rows": 992390,
+        "retained_rows": 945088,
+        "excluded_nonmerchandise_rows": 3962,
+        "cancelled_or_nonpositive": 23330,
+        "outside_invoice_sample_rows": 74981,
+        "cross_sheet_duplicates": 20010
+      }
+    },
+    {
+      "name": "split_coverage",
+      "passed": true,
+      "detail": {
+        "train": {
+          "invoices": 22066,
+          "date_min": "2009-12-01T07:45:00",
+          "date_max": "2011-03-03T19:21:00"
+        },
+        "validation": {
+          "invoices": 7345,
+          "date_min": "2011-03-04T08:10:00",
+          "date_max": "2011-08-17T20:02:00"
+        },
+        "test": {
+          "invoices": 7413,
+          "date_min": "2011-08-18T06:20:00",
+          "date_max": "2011-12-09T12:50:00"
+        }
+      }
+    },
+    {
+      "name": "date_boundaries",
+      "passed": true,
+      "detail": {
+        "train": {
+          "invoices": 22066,
+          "date_min": "2009-12-01T07:45:00",
+          "date_max": "2011-03-03T19:21:00"
+        },
+        "validation": {
+          "invoices": 7345,
+          "date_min": "2011-03-04T08:10:00",
+          "date_max": "2011-08-17T20:02:00"
+        },
+        "test": {
+          "invoices": 7413,
+          "date_min": "2011-08-18T06:20:00",
+          "date_max": "2011-12-09T12:50:00"
+        }
+      }
+    },
+    {
+      "name": "training_population",
+      "passed": true,
+      "detail": 22066
+    },
+    {
+      "name": "algorithm_agreement",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "benchmark_repetitions",
+      "passed": true,
+      "detail": {
+        "settings": 9,
+        "repetitions": 3
+      }
+    },
+    {
+      "name": "threshold_grid",
+      "passed": true,
+      "detail": 27
+    },
+    {
+      "name": "association_rule_count",
+      "passed": true,
+      "detail": 61
+    },
+    {
+      "name": "rule_metric_bounds",
+      "passed": true,
+      "detail": 61
+    },
+    {
+      "name": "rule_evaluation_alignment",
+      "passed": true,
+      "detail": {
+        "validation": 61,
+        "test": 61
+      }
+    },
+    {
+      "name": "exported_rule_count",
+      "passed": true,
+      "detail": 61
+    },
+    {
+      "name": "exported_rule_metrics",
+      "passed": true,
+      "detail": 61
+    },
+    {
+      "name": "target_excluded",
+      "passed": true,
+      "detail": "85123A"
+    },
+    {
+      "name": "cart_grid",
+      "passed": true,
+      "detail": 24
+    },
+    {
+      "name": "cart_test_reconciliation",
+      "passed": true,
+      "detail": {
+        "confusion_matrix": [
+          [
+            5332,
+            1443
+          ],
+          [
+            192,
+            446
+          ]
+        ],
+        "f1": 0.3529877324891175
+      }
+    },
+    {
+      "name": "extended_same_source",
+      "passed": true,
+      "detail": "b11b2be8dd3b9ecac1d4feee94e0a096c15a88f9dd6cc53760613d94a0f92670"
+    },
+    {
+      "name": "literature_count",
+      "passed": true,
+      "detail": 5
+    },
+    {
+      "name": "data_license",
+      "passed": true,
+      "detail": "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+    },
+    {
+      "name": "abstract_word_limit",
+      "passed": true,
+      "detail": 88
+    },
+    {
+      "name": "report_eda_figures",
+      "passed": true,
+      "detail": [
+        "01_missingness",
+        "02_basket_sizes",
+        "03_monthly_invoices",
+        "06_basket_boxplot",
+        "07_product_correlation",
+        "08_cart_class_balance"
+      ]
+    },
+    {
+      "name": "report_reference_links",
+      "passed": true,
+      "detail": [
+        "agrawal1994",
+        "han2000",
+        "zaki2000",
+        "hahsler2005",
+        "hahsler2007"
+      ]
+    },
+    {
+      "name": "report_identity_source",
+      "passed": true,
+      "detail": {
+        "author": "Gökhan Kartal",
+        "student_number": "2645007017",
+        "seed": 7017
+      }
+    },
+    {
+      "name": "ieee_class",
+      "passed": true,
+      "detail": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7"
+    },
+    {
+      "name": "report_rule_count_source",
+      "passed": true,
+      "detail": 61
+    },
+    {
+      "name": "report_population_counts",
+      "passed": true,
+      "detail": [
+        53628,
+        50000,
+        36824
+      ]
+    },
+    {
+      "name": "report_cart_f1",
+      "passed": true,
+      "detail": "0.353"
+    },
+    {
+      "name": "file_README.md",
+      "passed": true,
+      "detail": "README.md"
+    },
+    {
+      "name": "file_requirements.txt",
+      "passed": true,
+      "detail": "requirements.txt"
+    },
+    {
+      "name": "file_download_data.py",
+      "passed": true,
+      "detail": "download_data.py"
+    },
+    {
+      "name": "file_run_all.py",
+      "passed": true,
+      "detail": "run_all.py"
+    },
+    {
+      "name": "file_build_report.py",
+      "passed": true,
+      "detail": "build_report.py"
+    },
+    {
+      "name": "file_REFERENCES.bib",
+      "passed": true,
+      "detail": "REFERENCES.bib"
+    },
+    {
+      "name": "file_report/ara_rapor.md",
+      "passed": true,
+      "detail": "report/ara_rapor.md"
+    },
+    {
+      "name": "report_pdf_matches_sources",
+      "passed": true,
+      "detail": {
+        "/ReportSourceSHA256": true,
+        "/ReportTexSHA256": true,
+        "/ReportClassSHA256": true,
+        "/ReportFiguresSHA256": true
+      }
+    },
+    {
+      "name": "interim_page_limit",
+      "passed": true,
+      "detail": {
+        "content_pages": 4,
+        "reference_pages": 1,
+        "total_pages": 5
+      }
+    },
+    {
+      "name": "report_identity_pdf",
+      "passed": true,
+      "detail": {
+        "author": "Gökhan Kartal",
+        "student_number": "2645007017",
+        "seed": 7017
+      }
+    },
+    {
+      "name": "report_pdf_rule_count",
+      "passed": true,
+      "detail": 61
+    }
+  ],
+  "measurements": {
+    "abstract_words": 88,
+    "eda_figures": 6,
+    "literature_sources": 5,
+    "association_rules": 61,
+    "pdf": {
+      "exists": true,
+      "current": true,
+      "pages": 5,
+      "content_pages": 4,
+      "reference_pages": 1,
+      "sha256": "51baa9b2195684e1f67b3fca072466b594a59c560bfa403673a8defb3e94401d",
+      "metadata_matches": {
+        "/ReportSourceSHA256": true,
+        "/ReportTexSHA256": true,
+        "/ReportClassSHA256": true,
+        "/ReportFiguresSHA256": true
+      }
+    }
+  },
+  "report_source_hashes": {
+    "/ReportSourceSHA256": "f4c9a7952eafc8e83dd865ab90a67c9527d1959eff38fe6a905b58e8a5504101",
+    "/ReportTexSHA256": "2a418d82aa84ca01a955acf22ca9cfa10939ab00ed49f158e61e4c525e6162bd",
+    "/ReportClassSHA256": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7",
+    "/ReportFiguresSHA256": "d8f4ad7ec1769a87e7e6dc349221ba27ca4e85b64d5f2b75b07031c2902fc015"
+  }
+}

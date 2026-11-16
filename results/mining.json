@@ -1,0 +1,3014 @@
+{
+  "seed": 7017,
+  "training_baskets": 22066,
+  "vocabulary_size": 274,
+  "max_len": 3,
+  "algorithms_agree": true,
+  "benchmark_note": "3 warm-process repetitions; input preparation excluded; Python result conversion included; not a memory benchmark",
+  "timings": [
+    {
+      "algorithm": "eclat",
+      "min_support": 0.02,
+      "max_len": 3,
+      "frequent_itemsets": 331,
+      "seconds": [
+        0.45871469999838155,
+        0.44317169999703765,
+        0.4538803000032203
+      ],
+      "mean_seconds": 0.45192223333287984,
+      "sample_std_seconds": 0.007954352963916538
+    },
+    {
+      "algorithm": "apriori",
+      "min_support": 0.02,
+      "max_len": 3,
+      "frequent_itemsets": 331,
+      "seconds": [
+        0.07459980000567157,
+        0.07262489999993704,
+        0.08880120000685565
+      ],
+      "mean_seconds": 0.07867530000415475,
+      "sample_std_seconds": 0.008824706547907759
+    },
+    {
+      "algorithm": "fpgrowth",
+      "min_support": 0.02,
+      "max_len": 3,
+      "frequent_itemsets": 331,
+      "seconds": [
+        0.8224233000000822,
+        0.8788184999939403,
+        0.7355690999975195
+      ],
+      "mean_seconds": 0.8122702999971807,
+      "sample_std_seconds": 0.07216238775586512
+    },
+    {
+      "algorithm": "apriori",
+      "min_support": 0.03,
+      "max_len": 3,
+      "frequent_itemsets": 123,
+      "seconds": [
+        0.02963599999930011,
+        0.037171500000113156,
+        0.03335740000329679
+      ],
+      "mean_seconds": 0.03338830000090335,
+      "sample_std_seconds": 0.003767845030379091
+    },
+    {
+      "algorithm": "fpgrowth",
+      "min_support": 0.03,
+      "max_len": 3,
+      "frequent_itemsets": 123,
+      "seconds": [
+        0.46393910000188043,
+        0.34343920000537764,
+        0.4022915000023204
+      ],
+      "mean_seconds": 0.40322326666985947,
+      "sample_std_seconds": 0.06025535342717563
+    },
+    {
+      "algorithm": "eclat",
+      "min_support": 0.03,
+      "max_len": 3,
+      "frequent_itemsets": 123,
+      "seconds": [
+        0.14057010000396986,
+        0.1458483000023989,
+        0.14281840000330703
+      ],
+      "mean_seconds": 0.1430789333365586,
+      "sample_std_seconds": 0.0026487274339115135
+    },
+    {
+      "algorithm": "fpgrowth",
+      "min_support": 0.05,
+      "max_len": 3,
+      "frequent_itemsets": 29,
+      "seconds": [
+        0.0769780000046012,
+        0.06547149999823887,
+        0.06835890000365907
+      ],
+      "mean_seconds": 0.07026946666883305,
+      "sample_std_seconds": 0.00598645006123492
+    },
+    {
+      "algorithm": "apriori",
+      "min_support": 0.05,
+      "max_len": 3,
+      "frequent_itemsets": 29,
+      "seconds": [
+        0.010492599998542573,
+        0.010967399997753091,
+        0.009849499998381361
+      ],
+      "mean_seconds": 0.010436499998225676,
+      "sample_std_seconds": 0.0005610574923084936
+    },
+    {
+      "algorithm": "eclat",
+      "min_support": 0.05,
+      "max_len": 3,
+      "frequent_itemsets": 29,
+      "seconds": [
+        0.036787299999559764,
+        0.03804459999810206,
+        0.04011029999674065
+      ],
+      "mean_seconds": 0.038314066664800826,
+      "sample_std_seconds": 0.0016778085286057974
+    }
+  ],
+  "threshold_sweep": [
+    {
+      "min_support": 0.02,
+      "min_confidence": 0.2,
+      "min_lift_exclusive": 1,
+      "rules": 102
+    },
+    {
+      "min_support": 0.02,
+      "min_confidence": 0.2,
+      "min_lift_exclusive": 2,
+      "rules": 98
+    },
+    {
+      "min_support": 0.02,
+      "min_confidence": 0.2,
+      "min_lift_exclusive": 3,
+      "rules": 88
+    },
+    {
+      "min_support": 0.02,
+      "min_confidence": 0.4,
+      "min_lift_exclusive": 1,
+      "rules": 61
+    },
+    {
+      "min_support": 0.02,
+      "min_confidence": 0.4,
+      "min_lift_exclusive": 2,
+      "rules": 61
+    },
+    {
+      "min_support": 0.02,
+      "min_confidence": 0.4,
+      "min_lift_exclusive": 3,
+      "rules": 57
+    },
+    {
+      "min_support": 0.02,
+      "min_confidence": 0.6,
+      "min_lift_exclusive": 1,
+      "rules": 11
+    },
+    {
+      "min_support": 0.02,
+      "min_confidence": 0.6,
+      "min_lift_exclusive": 2,
+      "rules": 11
+    },
+    {
+      "min_support": 0.02,
+      "min_confidence": 0.6,
+      "min_lift_exclusive": 3,
+      "rules": 11
+    },
+    {
+      "min_support": 0.03,
+      "min_confidence": 0.2,
+      "min_lift_exclusive": 1,
+      "rules": 14
+    },
+    {
+      "min_support": 0.03,
+      "min_confidence": 0.2,
+      "min_lift_exclusive": 2,
+      "rules": 14
+    },
+    {
+      "min_support": 0.03,
+      "min_confidence": 0.2,
+      "min_lift_exclusive": 3,
+      "rules": 14
+    },
+    {
+      "min_support": 0.03,
+      "min_confidence": 0.4,
+      "min_lift_exclusive": 1,
+      "rules": 9
+    },
+    {
+      "min_support": 0.03,
+      "min_confidence": 0.4,
+      "min_lift_exclusive": 2,
+      "rules": 9
+    },
+    {
+      "min_support": 0.03,
+      "min_confidence": 0.4,
+      "min_lift_exclusive": 3,
+      "rules": 9
+    },
+    {
+      "min_support": 0.03,
+      "min_confidence": 0.6,
+      "min_lift_exclusive": 1,
+      "rules": 4
+    },
+    {
+      "min_support": 0.03,
+      "min_confidence": 0.6,
+      "min_lift_exclusive": 2,
+      "rules": 4
+    },
+    {
+      "min_support": 0.03,
+      "min_confidence": 0.6,
+      "min_lift_exclusive": 3,
+      "rules": 4
+    },
+    {
+      "min_support": 0.05,
+      "min_confidence": 0.2,
+      "min_lift_exclusive": 1,
+      "rules": 0
+    },
+    {
+      "min_support": 0.05,
+      "min_confidence": 0.2,
+      "min_lift_exclusive": 2,
+      "rules": 0
+    },
+    {
+      "min_support": 0.05,
+      "min_confidence": 0.2,
+      "min_lift_exclusive": 3,
+      "rules": 0
+    },
+    {
+      "min_support": 0.05,
+      "min_confidence": 0.4,
+      "min_lift_exclusive": 1,
+      "rules": 0
+    },
+    {
+      "min_support": 0.05,
+      "min_confidence": 0.4,
+      "min_lift_exclusive": 2,
+      "rules": 0
+    },
+    {
+      "min_support": 0.05,
+      "min_confidence": 0.4,
+      "min_lift_exclusive": 3,
+      "rules": 0
+    },
+    {
+      "min_support": 0.05,
+      "min_confidence": 0.6,
+      "min_lift_exclusive": 1,
+      "rules": 0
+    },
+    {
+      "min_support": 0.05,
+      "min_confidence": 0.6,
+      "min_lift_exclusive": 2,
+      "rules": 0
+    },
+    {
+      "min_support": 0.05,
+      "min_confidence": 0.6,
+      "min_lift_exclusive": 3,
+      "rules": 0
+    }
+  ],
+  "initial_policy": "support >= .02, confidence >= .4, lift > 1; exploratory, not validation-optimized",
+  "rules": [
+    {
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "support": 0.02052932112752651,
+      "confidence": 0.6751117734724292,
+      "lift": 21.652640106748,
+      "conviction": 2.9820126775636395,
+      "conviction_infinite": false,
+      "joint_count": 453
+    },
+    {
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "support": 0.02052932112752651,
+      "confidence": 0.6584302325581395,
+      "lift": 21.652640106747995,
+      "conviction": 2.838633037059035,
+      "conviction_infinite": false,
+      "joint_count": 453
+    },
+    {
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "support": 0.027599021118462793,
+      "confidence": 0.6520342612419701,
+      "lift": 13.07980728051392,
+      "conviction": 2.730583633714242,
+      "conviction_infinite": false,
+      "joint_count": 609
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "22356"
+      ],
+      "support": 0.027599021118462793,
+      "confidence": 0.5536363636363636,
+      "lift": 13.079807280513918,
+      "conviction": 2.1454983318882452,
+      "conviction_infinite": false,
+      "joint_count": 609
+    },
+    {
+      "antecedent": [
+        "21790"
+      ],
+      "consequent": [
+        "21791"
+      ],
+      "support": 0.020302728179099068,
+      "confidence": 0.4370731707317073,
+      "lift": 12.492819411095665,
+      "conviction": 1.7142797226722226,
+      "conviction_infinite": false,
+      "joint_count": 448
+    },
+    {
+      "antecedent": [
+        "21791"
+      ],
+      "consequent": [
+        "21790"
+      ],
+      "support": 0.020302728179099068,
+      "confidence": 0.5803108808290155,
+      "lift": 12.492819411095665,
+      "conviction": 2.272035185129236,
+      "conviction_infinite": false,
+      "joint_count": 448
+    },
+    {
+      "antecedent": [
+        "20723"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "support": 0.020438683948155532,
+      "confidence": 0.6212121212121212,
+      "lift": 12.461515151515153,
+      "conviction": 2.50839481555334,
+      "conviction_infinite": false,
+      "joint_count": 451
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "20723"
+      ],
+      "support": 0.020438683948155532,
+      "confidence": 0.41,
+      "lift": 12.46151515151515,
+      "conviction": 1.6391503455734489,
+      "conviction_infinite": false,
+      "joint_count": 451
+    },
+    {
+      "antecedent": [
+        "20719"
+      ],
+      "consequent": [
+        "22355"
+      ],
+      "support": 0.020212090999728087,
+      "confidence": 0.522248243559719,
+      "lift": 11.880339940606968,
+      "conviction": 2.0011249673439573,
+      "conviction_infinite": false,
+      "joint_count": 446
+    },
+    {
+      "antecedent": [
+        "22355"
+      ],
+      "consequent": [
+        "20719"
+      ],
+      "support": 0.020212090999728087,
+      "confidence": 0.45979381443298967,
+      "lift": 11.880339940606968,
+      "conviction": 1.779501882970104,
+      "conviction_infinite": false,
+      "joint_count": 446
+    },
+    {
+      "antecedent": [
+        "22355"
+      ],
+      "consequent": [
+        "22356"
+      ],
+      "support": 0.021707604459349224,
+      "confidence": 0.49381443298969074,
+      "lift": 11.666498156692203,
+      "conviction": 1.8919394381196348,
+      "conviction_infinite": false,
+      "joint_count": 479
+    },
+    {
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "22355"
+      ],
+      "support": 0.021707604459349224,
+      "confidence": 0.512847965738758,
+      "lift": 11.6664981566922,
+      "conviction": 1.962510470586243,
+      "conviction_infinite": false,
+      "joint_count": 479
+    },
+    {
+      "antecedent": [
+        "82482"
+      ],
+      "consequent": [
+        "82494L"
+      ],
+      "support": 0.029321127526511375,
+      "confidence": 0.6251207729468599,
+      "lift": 11.630619709819063,
+      "conviction": 2.5241520050906323,
+      "conviction_infinite": false,
+      "joint_count": 647
+    },
+    {
+      "antecedent": [
+        "82494L"
+      ],
+      "consequent": [
+        "82482"
+      ],
+      "support": 0.029321127526511375,
+      "confidence": 0.545531197301855,
+      "lift": 11.630619709819063,
+      "conviction": 2.0971632244437206,
+      "conviction_infinite": false,
+      "joint_count": 647
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "20719"
+      ],
+      "support": 0.022070153176833137,
+      "confidence": 0.44272727272727275,
+      "lift": 11.439367681498831,
+      "conviction": 1.7250044320545705,
+      "conviction_infinite": false,
+      "joint_count": 487
+    },
+    {
+      "antecedent": [
+        "20719"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "support": 0.022070153176833137,
+      "confidence": 0.5702576112412178,
+      "lift": 11.439367681498828,
+      "conviction": 2.210974705311857,
+      "conviction_infinite": false,
+      "joint_count": 487
+    },
+    {
+      "antecedent": [
+        "22355"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "support": 0.023021843560228406,
+      "confidence": 0.5237113402061856,
+      "lift": 10.505649484536084,
+      "conviction": 1.9949027376744228,
+      "conviction_infinite": false,
+      "joint_count": 508
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "22355"
+      ],
+      "support": 0.023021843560228406,
+      "confidence": 0.4618181818181818,
+      "lift": 10.505649484536082,
+      "conviction": 1.7764274743337554,
+      "conviction_infinite": false,
+      "joint_count": 508
+    },
+    {
+      "antecedent": [
+        "22112"
+      ],
+      "consequent": [
+        "22114"
+      ],
+      "support": 0.020574639717212,
+      "confidence": 0.45490981963927857,
+      "lift": 10.456291750167,
+      "conviction": 1.7547447896950858,
+      "conviction_infinite": false,
+      "joint_count": 454
+    },
+    {
+      "antecedent": [
+        "22114"
+      ],
+      "consequent": [
+        "22112"
+      ],
+      "support": 0.020574639717212,
+      "confidence": 0.47291666666666665,
+      "lift": 10.456291750167,
+      "conviction": 1.8114252284468908,
+      "conviction_infinite": false,
+      "joint_count": 454
+    },
+    {
+      "antecedent": [
+        "21231"
+      ],
+      "consequent": [
+        "21232"
+      ],
+      "support": 0.03707060636272999,
+      "confidence": 0.7783063748810657,
+      "lift": 10.24708142489594,
+      "conviction": 4.168121853713149,
+      "conviction_infinite": false,
+      "joint_count": 818
+    },
+    {
+      "antecedent": [
+        "21232"
+      ],
+      "consequent": [
+        "21231"
+      ],
+      "support": 0.03707060636272999,
+      "confidence": 0.4880668257756563,
+      "lift": 10.247081424895939,
+      "conviction": 1.8603407831179062,
+      "conviction_infinite": false,
+      "joint_count": 818
+    },
+    {
+      "antecedent": [
+        "22469"
+      ],
+      "consequent": [
+        "22470"
+      ],
+      "support": 0.029819632013051753,
+      "confidence": 0.5193370165745856,
+      "lift": 9.16042414687035,
+      "conviction": 1.9625111082635063,
+      "conviction_infinite": false,
+      "joint_count": 658
+    },
+    {
+      "antecedent": [
+        "22470"
+      ],
+      "consequent": [
+        "22469"
+      ],
+      "support": 0.029819632013051753,
+      "confidence": 0.5259792166266987,
+      "lift": 9.16042414687035,
+      "conviction": 1.988481053849031,
+      "conviction_infinite": false,
+      "joint_count": 658
+    },
+    {
+      "antecedent": [
+        "22382"
+      ],
+      "consequent": [
+        "22383"
+      ],
+      "support": 0.024290764071422097,
+      "confidence": 0.48727272727272725,
+      "lift": 8.720324412003244,
+      "conviction": 1.8413730439886016,
+      "conviction_infinite": false,
+      "joint_count": 536
+    },
+    {
+      "antecedent": [
+        "22383"
+      ],
+      "consequent": [
+        "22382"
+      ],
+      "support": 0.024290764071422097,
+      "confidence": 0.43471208434712083,
+      "lift": 8.720324412003244,
+      "conviction": 1.6808240987224838,
+      "conviction_infinite": false,
+      "joint_count": 536
+    },
+    {
+      "antecedent": [
+        "21754"
+      ],
+      "consequent": [
+        "21755"
+      ],
+      "support": 0.02818816278437415,
+      "confidence": 0.4392655367231638,
+      "lift": 8.298658675799086,
+      "conviction": 1.6889774916149192,
+      "conviction_infinite": false,
+      "joint_count": 622
+    },
+    {
+      "antecedent": [
+        "21755"
+      ],
+      "consequent": [
+        "21754"
+      ],
+      "support": 0.02818816278437415,
+      "confidence": 0.5325342465753424,
+      "lift": 8.298658675799086,
+      "conviction": 2.0019196489784723,
+      "conviction_infinite": false,
+      "joint_count": 622
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "22382"
+      ],
+      "support": 0.0201667724100426,
+      "confidence": 0.4086317722681359,
+      "lift": 8.197153351698807,
+      "conviction": 1.6066969897760135,
+      "conviction_infinite": false,
+      "joint_count": 445
+    },
+    {
+      "antecedent": [
+        "22382"
+      ],
+      "consequent": [
+        "22384"
+      ],
+      "support": 0.0201667724100426,
+      "confidence": 0.40454545454545454,
+      "lift": 8.197153351698805,
+      "conviction": 1.5965081853675613,
+      "conviction_infinite": false,
+      "joint_count": 445
+    },
+    {
+      "antecedent": [
+        "84992"
+      ],
+      "consequent": [
+        "84991"
+      ],
+      "support": 0.022206108945889605,
+      "confidence": 0.5098855359001041,
+      "lift": 8.18859842443355,
+      "conviction": 1.9132923560913477,
+      "conviction_infinite": false,
+      "joint_count": 490
+    },
+    {
+      "antecedent": [
+        "21977"
+      ],
+      "consequent": [
+        "84991"
+      ],
+      "support": 0.027463065349406325,
+      "confidence": 0.5,
+      "lift": 8.029839883551674,
+      "conviction": 1.8754645155442762,
+      "conviction_infinite": false,
+      "joint_count": 606
+    },
+    {
+      "antecedent": [
+        "84991"
+      ],
+      "consequent": [
+        "21977"
+      ],
+      "support": 0.027463065349406325,
+      "confidence": 0.4410480349344978,
+      "lift": 8.029839883551674,
+      "conviction": 1.6907962192966555,
+      "conviction_infinite": false,
+      "joint_count": 606
+    },
+    {
+      "antecedent": [
+        "20728"
+      ],
+      "consequent": [
+        "22383"
+      ],
+      "support": 0.02012145382035711,
+      "confidence": 0.4391691394658754,
+      "lift": 7.859453553490678,
+      "conviction": 1.6834347846311954,
+      "conviction_infinite": false,
+      "joint_count": 444
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "20727"
+      ],
+      "support": 0.020484002537841023,
+      "confidence": 0.4150596877869605,
+      "lift": 7.794644315495379,
+      "conviction": 1.6185423321871122,
+      "conviction_infinite": false,
+      "joint_count": 452
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "22383"
+      ],
+      "support": 0.021481011510921782,
+      "confidence": 0.43526170798898073,
+      "lift": 7.789525424561921,
+      "conviction": 1.671787077791017,
+      "conviction_infinite": false,
+      "joint_count": 474
+    },
+    {
+      "antecedent": [
+        "20726"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "support": 0.024789268557962475,
+      "confidence": 0.5503018108651911,
+      "lift": 7.240882384347828,
+      "conviction": 2.0547130218050342,
+      "conviction_infinite": false,
+      "joint_count": 547
+    },
+    {
+      "antecedent": [
+        "85099F"
+      ],
+      "consequent": [
+        "21931"
+      ],
+      "support": 0.020393365358470045,
+      "confidence": 0.41020966271649956,
+      "lift": 7.189584128278221,
+      "conviction": 1.598778135174356,
+      "conviction_infinite": false,
+      "joint_count": 450
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "support": 0.026737967914438502,
+      "confidence": 0.54178145087236,
+      "lift": 7.128771314817826,
+      "conviction": 2.0165065924471075,
+      "conviction_infinite": false,
+      "joint_count": 590
+    },
+    {
+      "antecedent": [
+        "20728"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "support": 0.024018852533309164,
+      "confidence": 0.5242334322453017,
+      "lift": 6.897874129949212,
+      "conviction": 1.9421304221902427,
+      "conviction_infinite": false,
+      "joint_count": 530
+    },
+    {
+      "antecedent": [
+        "21977"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "support": 0.03330916341883441,
+      "confidence": 0.6064356435643564,
+      "lift": 6.887086418369063,
+      "conviction": 2.3171457611157376,
+      "conviction_infinite": false,
+      "joint_count": 735
+    },
+    {
+      "antecedent": [
+        "21975"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "support": 0.020710595486268468,
+      "confidence": 0.6036988110964333,
+      "lift": 6.85600512900355,
+      "conviction": 2.301143690141696,
+      "conviction_infinite": false,
+      "joint_count": 457
+    },
+    {
+      "antecedent": [
+        "21213"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "support": 0.02333907368802683,
+      "confidence": 0.5905963302752294,
+      "lift": 6.707204644288838,
+      "conviction": 2.227498304678529,
+      "conviction_infinite": false,
+      "joint_count": 515
+    },
+    {
+      "antecedent": [
+        "20727"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "support": 0.026964560862865947,
+      "confidence": 0.5063829787234042,
+      "lift": 6.662997500602646,
+      "conviction": 1.8718980206715274,
+      "conviction_infinite": false,
+      "joint_count": 595
+    },
+    {
+      "antecedent": [
+        "85099F"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "support": 0.03172301277984229,
+      "confidence": 0.6381039197812215,
+      "lift": 6.6105169454894055,
+      "conviction": 2.496494030617102,
+      "conviction_infinite": false,
+      "joint_count": 700
+    },
+    {
+      "antecedent": [
+        "21212"
+      ],
+      "consequent": [
+        "84991"
+      ],
+      "support": 0.035982960210278254,
+      "confidence": 0.40864642305712817,
+      "lift": 6.562730692269716,
+      "conviction": 1.5857387091829978,
+      "conviction_infinite": false,
+      "joint_count": 794
+    },
+    {
+      "antecedent": [
+        "84991"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "support": 0.035982960210278254,
+      "confidence": 0.5778748180494906,
+      "lift": 6.562730692269716,
+      "conviction": 2.160368580778042,
+      "conviction_infinite": false,
+      "joint_count": 794
+    },
+    {
+      "antecedent": [
+        "84992"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "support": 0.02460799419922052,
+      "confidence": 0.5650364203954215,
+      "lift": 6.416929311603381,
+      "conviction": 2.09660307897534,
+      "conviction_infinite": false,
+      "joint_count": 543
+    },
+    {
+      "antecedent": [
+        "22383"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "support": 0.026647330735067525,
+      "confidence": 0.4768856447688564,
+      "lift": 6.274870982390928,
+      "conviction": 1.7663455721630035,
+      "conviction_infinite": false,
+      "joint_count": 588
+    },
+    {
+      "antecedent": [
+        "20713"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "support": 0.021163781383123356,
+      "confidence": 0.601029601029601,
+      "lift": 6.226440927849378,
+      "conviction": 2.264507357692319,
+      "conviction_infinite": false,
+      "joint_count": 467
+    },
+    {
+      "antecedent": [
+        "22386"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "support": 0.030680685217076044,
+      "confidence": 0.5902353966870096,
+      "lift": 6.114617025021387,
+      "conviction": 2.20485468160316,
+      "conviction_infinite": false,
+      "joint_count": 677
+    },
+    {
+      "antecedent": [
+        "22382"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "support": 0.022613976253059005,
+      "confidence": 0.4536363636363636,
+      "lift": 5.968956469886702,
+      "conviction": 1.6911826915260872,
+      "conviction_infinite": false,
+      "joint_count": 499
+    },
+    {
+      "antecedent": [
+        "85099C"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "support": 0.027145835221607902,
+      "confidence": 0.5743048897411314,
+      "lift": 5.949582956351081,
+      "conviction": 2.12234386112751,
+      "conviction_infinite": false,
+      "joint_count": 599
+    },
+    {
+      "antecedent": [
+        "21928"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "support": 0.020257409589413577,
+      "confidence": 0.5385542168674698,
+      "lift": 5.5792194128627175,
+      "conviction": 1.9579145307964072,
+      "conviction_infinite": false,
+      "joint_count": 447
+    },
+    {
+      "antecedent": [
+        "21931"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "support": 0.0304540922686486,
+      "confidence": 0.5337569499602859,
+      "lift": 5.52952152949468,
+      "conviction": 1.9377691611552208,
+      "conviction_infinite": false,
+      "joint_count": 672
+    },
+    {
+      "antecedent": [
+        "22411"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "support": 0.02465331278890601,
+      "confidence": 0.47304347826086957,
+      "lift": 4.900552765870586,
+      "conviction": 1.714508439876889,
+      "conviction_infinite": false,
+      "joint_count": 544
+    },
+    {
+      "antecedent": [
+        "21733"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "support": 0.03779570379769782,
+      "confidence": 0.7122117847993168,
+      "lift": 4.500476873820655,
+      "conviction": 2.9248851772172015,
+      "conviction_infinite": false,
+      "joint_count": 834
+    },
+    {
+      "antecedent": [
+        "82482"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "support": 0.022251427535575092,
+      "confidence": 0.47439613526570046,
+      "lift": 2.997716243062127,
+      "conviction": 1.6014864830641764,
+      "conviction_infinite": false,
+      "joint_count": 491
+    },
+    {
+      "antecedent": [
+        "82494L"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "support": 0.024834587147647965,
+      "confidence": 0.4620573355817875,
+      "lift": 2.919747184120196,
+      "conviction": 1.5647531614333403,
+      "conviction_infinite": false,
+      "joint_count": 548
+    },
+    {
+      "antecedent": [
+        "21755"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "support": 0.022070153176833137,
+      "confidence": 0.4169520547945205,
+      "lift": 2.6347262431546077,
+      "conviction": 1.4437020003931602,
+      "conviction_infinite": false,
+      "joint_count": 487
+    },
+    {
+      "antecedent": [
+        "22470"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "support": 0.02284056920148645,
+      "confidence": 0.4028776978417266,
+      "lift": 2.5457901719861225,
+      "conviction": 1.4096734986715644,
+      "conviction_infinite": false,
+      "joint_count": 504
+    }
+  ],
+  "validation": [
+    {
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 102,
+      "joint_count": 70,
+      "support": 0.009530292716133424,
+      "confidence": 0.6862745098039216,
+      "lift": 32.10628200324716
+    },
+    {
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 157,
+      "joint_count": 70,
+      "support": 0.009530292716133424,
+      "confidence": 0.445859872611465,
+      "lift": 32.10628200324716
+    },
+    {
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 279,
+      "joint_count": 194,
+      "support": 0.026412525527569775,
+      "confidence": 0.6953405017921147,
+      "lift": 12.610557989291562
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "22356"
+      ],
+      "antecedent_count": 405,
+      "joint_count": 194,
+      "support": 0.026412525527569775,
+      "confidence": 0.47901234567901235,
+      "lift": 12.610557989291562
+    },
+    {
+      "antecedent": [
+        "21790"
+      ],
+      "consequent": [
+        "21791"
+      ],
+      "antecedent_count": 289,
+      "joint_count": 85,
+      "support": 0.011572498298162015,
+      "confidence": 0.29411764705882354,
+      "lift": 12.782805429864254
+    },
+    {
+      "antecedent": [
+        "21791"
+      ],
+      "consequent": [
+        "21790"
+      ],
+      "antecedent_count": 169,
+      "joint_count": 85,
+      "support": 0.011572498298162015,
+      "confidence": 0.5029585798816568,
+      "lift": 12.782805429864252
+    },
+    {
+      "antecedent": [
+        "20723"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 326,
+      "joint_count": 215,
+      "support": 0.029271613342409804,
+      "confidence": 0.6595092024539877,
+      "lift": 11.960728622282815
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "20723"
+      ],
+      "antecedent_count": 405,
+      "joint_count": 215,
+      "support": 0.029271613342409804,
+      "confidence": 0.5308641975308642,
+      "lift": 11.960728622282815
+    },
+    {
+      "antecedent": [
+        "20719"
+      ],
+      "consequent": [
+        "22355"
+      ],
+      "antecedent_count": 344,
+      "joint_count": 179,
+      "support": 0.024370319945541185,
+      "confidence": 0.5203488372093024,
+      "lift": 10.557906655531287
+    },
+    {
+      "antecedent": [
+        "22355"
+      ],
+      "consequent": [
+        "20719"
+      ],
+      "antecedent_count": 362,
+      "joint_count": 179,
+      "support": 0.024370319945541185,
+      "confidence": 0.494475138121547,
+      "lift": 10.557906655531287
+    },
+    {
+      "antecedent": [
+        "22355"
+      ],
+      "consequent": [
+        "22356"
+      ],
+      "antecedent_count": 362,
+      "joint_count": 145,
+      "support": 0.019741320626276378,
+      "confidence": 0.4005524861878453,
+      "lift": 10.545010792292917
+    },
+    {
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "22355"
+      ],
+      "antecedent_count": 279,
+      "joint_count": 145,
+      "support": 0.019741320626276378,
+      "confidence": 0.5197132616487455,
+      "lift": 10.545010792292917
+    },
+    {
+      "antecedent": [
+        "82482"
+      ],
+      "consequent": [
+        "82494L"
+      ],
+      "antecedent_count": 488,
+      "joint_count": 152,
+      "support": 0.02069434989788972,
+      "confidence": 0.3114754098360656,
+      "lift": 8.473284760170007
+    },
+    {
+      "antecedent": [
+        "82494L"
+      ],
+      "consequent": [
+        "82482"
+      ],
+      "antecedent_count": 270,
+      "joint_count": 152,
+      "support": 0.02069434989788972,
+      "confidence": 0.562962962962963,
+      "lift": 8.473284760170007
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "20719"
+      ],
+      "antecedent_count": 405,
+      "joint_count": 199,
+      "support": 0.027093260721579304,
+      "confidence": 0.49135802469135803,
+      "lift": 10.491350846971002
+    },
+    {
+      "antecedent": [
+        "20719"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 344,
+      "joint_count": 199,
+      "support": 0.027093260721579304,
+      "confidence": 0.5784883720930233,
+      "lift": 10.491350846971002
+    },
+    {
+      "antecedent": [
+        "22355"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 362,
+      "joint_count": 206,
+      "support": 0.028046289993192648,
+      "confidence": 0.569060773480663,
+      "lift": 10.320373780778937
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "22355"
+      ],
+      "antecedent_count": 405,
+      "joint_count": 206,
+      "support": 0.028046289993192648,
+      "confidence": 0.508641975308642,
+      "lift": 10.320373780778937
+    },
+    {
+      "antecedent": [
+        "22112"
+      ],
+      "consequent": [
+        "22114"
+      ],
+      "antecedent_count": 93,
+      "joint_count": 1,
+      "support": 0.00013614703880190606,
+      "confidence": 0.010752688172043012,
+      "lift": 19.74462365591398
+    },
+    {
+      "antecedent": [
+        "22114"
+      ],
+      "consequent": [
+        "22112"
+      ],
+      "antecedent_count": 4,
+      "joint_count": 1,
+      "support": 0.00013614703880190606,
+      "confidence": 0.25,
+      "lift": 19.74462365591398
+    },
+    {
+      "antecedent": [
+        "21231"
+      ],
+      "consequent": [
+        "21232"
+      ],
+      "antecedent_count": 169,
+      "joint_count": 105,
+      "support": 0.014295439074200136,
+      "confidence": 0.621301775147929,
+      "lift": 14.395777723853431
+    },
+    {
+      "antecedent": [
+        "21232"
+      ],
+      "consequent": [
+        "21231"
+      ],
+      "antecedent_count": 317,
+      "joint_count": 105,
+      "support": 0.014295439074200136,
+      "confidence": 0.3312302839116719,
+      "lift": 14.395777723853433
+    },
+    {
+      "antecedent": [
+        "22469"
+      ],
+      "consequent": [
+        "22470"
+      ],
+      "antecedent_count": 344,
+      "joint_count": 139,
+      "support": 0.018924438393464943,
+      "confidence": 0.40406976744186046,
+      "lift": 12.47013631033809
+    },
+    {
+      "antecedent": [
+        "22470"
+      ],
+      "consequent": [
+        "22469"
+      ],
+      "antecedent_count": 238,
+      "joint_count": 139,
+      "support": 0.018924438393464943,
+      "confidence": 0.5840336134453782,
+      "lift": 12.47013631033809
+    },
+    {
+      "antecedent": [
+        "22382"
+      ],
+      "consequent": [
+        "22383"
+      ],
+      "antecedent_count": 479,
+      "joint_count": 227,
+      "support": 0.030905377808032677,
+      "confidence": 0.47390396659707723,
+      "lift": 5.939973779275652
+    },
+    {
+      "antecedent": [
+        "22383"
+      ],
+      "consequent": [
+        "22382"
+      ],
+      "antecedent_count": 586,
+      "joint_count": 227,
+      "support": 0.030905377808032677,
+      "confidence": 0.3873720136518771,
+      "lift": 5.939973779275652
+    },
+    {
+      "antecedent": [
+        "21754"
+      ],
+      "consequent": [
+        "21755"
+      ],
+      "antecedent_count": 294,
+      "joint_count": 107,
+      "support": 0.014567733151803949,
+      "confidence": 0.36394557823129253,
+      "lift": 10.910939886158545
+    },
+    {
+      "antecedent": [
+        "21755"
+      ],
+      "consequent": [
+        "21754"
+      ],
+      "antecedent_count": 245,
+      "joint_count": 107,
+      "support": 0.014567733151803949,
+      "confidence": 0.43673469387755104,
+      "lift": 10.910939886158546
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "22382"
+      ],
+      "antecedent_count": 524,
+      "joint_count": 213,
+      "support": 0.028999319264805992,
+      "confidence": 0.4064885496183206,
+      "lift": 6.233107300514749
+    },
+    {
+      "antecedent": [
+        "22382"
+      ],
+      "consequent": [
+        "22384"
+      ],
+      "antecedent_count": 479,
+      "joint_count": 213,
+      "support": 0.028999319264805992,
+      "confidence": 0.44467640918580376,
+      "lift": 6.2331073005147495
+    },
+    {
+      "antecedent": [
+        "84992"
+      ],
+      "consequent": [
+        "84991"
+      ],
+      "antecedent_count": 190,
+      "joint_count": 95,
+      "support": 0.012933968686181076,
+      "confidence": 0.5,
+      "lift": 10.117079889807162
+    },
+    {
+      "antecedent": [
+        "21977"
+      ],
+      "consequent": [
+        "84991"
+      ],
+      "antecedent_count": 375,
+      "joint_count": 146,
+      "support": 0.019877467665078283,
+      "confidence": 0.3893333333333333,
+      "lift": 7.87783287419651
+    },
+    {
+      "antecedent": [
+        "84991"
+      ],
+      "consequent": [
+        "21977"
+      ],
+      "antecedent_count": 363,
+      "joint_count": 146,
+      "support": 0.019877467665078283,
+      "confidence": 0.4022038567493113,
+      "lift": 7.8778328741965105
+    },
+    {
+      "antecedent": [
+        "20728"
+      ],
+      "consequent": [
+        "22383"
+      ],
+      "antecedent_count": 529,
+      "joint_count": 267,
+      "support": 0.03635125936010892,
+      "confidence": 0.504725897920605,
+      "lift": 6.326299863868333
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "20727"
+      ],
+      "antecedent_count": 524,
+      "joint_count": 258,
+      "support": 0.03512593601089176,
+      "confidence": 0.49236641221374045,
+      "lift": 6.8106050804330005
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "22383"
+      ],
+      "antecedent_count": 524,
+      "joint_count": 235,
+      "support": 0.031994554118447927,
+      "confidence": 0.4484732824427481,
+      "lift": 5.621222285907824
+    },
+    {
+      "antecedent": [
+        "20726"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 460,
+      "joint_count": 243,
+      "support": 0.03308373042886317,
+      "confidence": 0.5282608695652173,
+      "lift": 5.664344652491272
+    },
+    {
+      "antecedent": [
+        "85099F"
+      ],
+      "consequent": [
+        "21931"
+      ],
+      "antecedent_count": 355,
+      "joint_count": 125,
+      "support": 0.01701837985023826,
+      "confidence": 0.352112676056338,
+      "lift": 4.898234101579172
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 524,
+      "joint_count": 303,
+      "support": 0.041252552756977534,
+      "confidence": 0.5782442748091603,
+      "lift": 6.200298099960996
+    },
+    {
+      "antecedent": [
+        "20728"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 529,
+      "joint_count": 273,
+      "support": 0.03716814159292035,
+      "confidence": 0.5160680529300568,
+      "lift": 5.533605618644185
+    },
+    {
+      "antecedent": [
+        "21977"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "antecedent_count": 375,
+      "joint_count": 167,
+      "support": 0.022736555479918312,
+      "confidence": 0.44533333333333336,
+      "lift": 6.171647798742138
+    },
+    {
+      "antecedent": [
+        "21975"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "antecedent_count": 254,
+      "joint_count": 135,
+      "support": 0.018379850238257316,
+      "confidence": 0.531496062992126,
+      "lift": 7.3657331748625765
+    },
+    {
+      "antecedent": [
+        "21213"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "antecedent_count": 250,
+      "joint_count": 149,
+      "support": 0.020285908781484004,
+      "confidence": 0.596,
+      "lift": 8.25966037735849
+    },
+    {
+      "antecedent": [
+        "20727"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 531,
+      "joint_count": 278,
+      "support": 0.037848876786929886,
+      "confidence": 0.5235404896421846,
+      "lift": 5.613729775798315
+    },
+    {
+      "antecedent": [
+        "85099F"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 355,
+      "joint_count": 229,
+      "support": 0.03117767188563649,
+      "confidence": 0.6450704225352113,
+      "lift": 5.471180431317698
+    },
+    {
+      "antecedent": [
+        "21212"
+      ],
+      "consequent": [
+        "84991"
+      ],
+      "antecedent_count": 530,
+      "joint_count": 191,
+      "support": 0.026004084411164058,
+      "confidence": 0.360377358490566,
+      "lift": 7.291933052653463
+    },
+    {
+      "antecedent": [
+        "84991"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "antecedent_count": 363,
+      "joint_count": 191,
+      "support": 0.026004084411164058,
+      "confidence": 0.5261707988980716,
+      "lift": 7.291933052653464
+    },
+    {
+      "antecedent": [
+        "84992"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "antecedent_count": 190,
+      "joint_count": 110,
+      "support": 0.014976174268209666,
+      "confidence": 0.5789473684210527,
+      "lift": 8.023336643495531
+    },
+    {
+      "antecedent": [
+        "22383"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 586,
+      "joint_count": 293,
+      "support": 0.039891082368958476,
+      "confidence": 0.5,
+      "lift": 5.361313868613139
+    },
+    {
+      "antecedent": [
+        "20713"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 198,
+      "joint_count": 117,
+      "support": 0.01592920353982301,
+      "confidence": 0.5909090909090909,
+      "lift": 5.011809783749738
+    },
+    {
+      "antecedent": [
+        "22386"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 560,
+      "joint_count": 385,
+      "support": 0.05241660993873383,
+      "confidence": 0.6875,
+      "lift": 5.83104792147806
+    },
+    {
+      "antecedent": [
+        "22382"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 479,
+      "joint_count": 243,
+      "support": 0.03308373042886317,
+      "confidence": 0.5073068893528184,
+      "lift": 5.439662923060513
+    },
+    {
+      "antecedent": [
+        "85099C"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 393,
+      "joint_count": 249,
+      "support": 0.03390061266167461,
+      "confidence": 0.6335877862595419,
+      "lift": 5.373790173298309
+    },
+    {
+      "antecedent": [
+        "21928"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 351,
+      "joint_count": 235,
+      "support": 0.031994554118447927,
+      "confidence": 0.6695156695156695,
+      "lift": 5.678513386365581
+    },
+    {
+      "antecedent": [
+        "21931"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 528,
+      "joint_count": 318,
+      "support": 0.043294758339006124,
+      "confidence": 0.6022727272727273,
+      "lift": 5.10819074112954
+    },
+    {
+      "antecedent": [
+        "22411"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 521,
+      "joint_count": 322,
+      "support": 0.04383934649421375,
+      "confidence": 0.6180422264875239,
+      "lift": 5.24194013112109
+    },
+    {
+      "antecedent": [
+        "21733"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "antecedent_count": 187,
+      "joint_count": 128,
+      "support": 0.017426820966643976,
+      "confidence": 0.6844919786096256,
+      "lift": 5.642641507169135
+    },
+    {
+      "antecedent": [
+        "82482"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "antecedent_count": 488,
+      "joint_count": 154,
+      "support": 0.020966643975493533,
+      "confidence": 0.3155737704918033,
+      "lift": 2.6014470754907912
+    },
+    {
+      "antecedent": [
+        "82494L"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "antecedent_count": 270,
+      "joint_count": 96,
+      "support": 0.013070115724982982,
+      "confidence": 0.35555555555555557,
+      "lift": 2.9310387828906346
+    },
+    {
+      "antecedent": [
+        "21755"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "antecedent_count": 245,
+      "joint_count": 88,
+      "support": 0.011980939414567734,
+      "confidence": 0.35918367346938773,
+      "lift": 2.9609473418997223
+    },
+    {
+      "antecedent": [
+        "22470"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "antecedent_count": 238,
+      "joint_count": 95,
+      "support": 0.012933968686181076,
+      "confidence": 0.39915966386554624,
+      "lift": 3.290491280687359
+    }
+  ],
+  "test": [
+    {
+      "antecedent": [
+        "84997C"
+      ],
+      "consequent": [
+        "84997D"
+      ],
+      "antecedent_count": 107,
+      "joint_count": 83,
+      "support": 0.01119654660731148,
+      "confidence": 0.7757009345794392,
+      "lift": 35.06262821974014
+    },
+    {
+      "antecedent": [
+        "84997D"
+      ],
+      "consequent": [
+        "84997C"
+      ],
+      "antecedent_count": 164,
+      "joint_count": 83,
+      "support": 0.01119654660731148,
+      "confidence": 0.5060975609756098,
+      "lift": 35.06262821974014
+    },
+    {
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 269,
+      "joint_count": 203,
+      "support": 0.027384324834749764,
+      "confidence": 0.7546468401486989,
+      "lift": 14.126760166722992
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "22356"
+      ],
+      "antecedent_count": 396,
+      "joint_count": 203,
+      "support": 0.027384324834749764,
+      "confidence": 0.5126262626262627,
+      "lift": 14.126760166722994
+    },
+    {
+      "antecedent": [
+        "21790"
+      ],
+      "consequent": [
+        "21791"
+      ],
+      "antecedent_count": 444,
+      "joint_count": 174,
+      "support": 0.023472278429785512,
+      "confidence": 0.3918918918918919,
+      "lift": 10.12228081740277
+    },
+    {
+      "antecedent": [
+        "21791"
+      ],
+      "consequent": [
+        "21790"
+      ],
+      "antecedent_count": 287,
+      "joint_count": 174,
+      "support": 0.023472278429785512,
+      "confidence": 0.6062717770034843,
+      "lift": 10.12228081740277
+    },
+    {
+      "antecedent": [
+        "20723"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 230,
+      "joint_count": 173,
+      "support": 0.02333738027789019,
+      "confidence": 0.7521739130434782,
+      "lift": 14.080467720685112
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "20723"
+      ],
+      "antecedent_count": 396,
+      "joint_count": 173,
+      "support": 0.02333738027789019,
+      "confidence": 0.43686868686868685,
+      "lift": 14.080467720685112
+    },
+    {
+      "antecedent": [
+        "20719"
+      ],
+      "consequent": [
+        "22355"
+      ],
+      "antecedent_count": 282,
+      "joint_count": 164,
+      "support": 0.02212329691083232,
+      "confidence": 0.5815602836879432,
+      "lift": 14.515509706999067
+    },
+    {
+      "antecedent": [
+        "22355"
+      ],
+      "consequent": [
+        "20719"
+      ],
+      "antecedent_count": 297,
+      "joint_count": 164,
+      "support": 0.02212329691083232,
+      "confidence": 0.5521885521885522,
+      "lift": 14.515509706999069
+    },
+    {
+      "antecedent": [
+        "22355"
+      ],
+      "consequent": [
+        "22356"
+      ],
+      "antecedent_count": 297,
+      "joint_count": 157,
+      "support": 0.02117900984756509,
+      "confidence": 0.5286195286195287,
+      "lift": 14.567496526604335
+    },
+    {
+      "antecedent": [
+        "22356"
+      ],
+      "consequent": [
+        "22355"
+      ],
+      "antecedent_count": 269,
+      "joint_count": 157,
+      "support": 0.02117900984756509,
+      "confidence": 0.5836431226765799,
+      "lift": 14.567496526604334
+    },
+    {
+      "antecedent": [
+        "82482"
+      ],
+      "consequent": [
+        "82494L"
+      ],
+      "antecedent_count": 335,
+      "joint_count": 194,
+      "support": 0.026170241467691892,
+      "confidence": 0.5791044776119403,
+      "lift": 11.826174910571112
+    },
+    {
+      "antecedent": [
+        "82494L"
+      ],
+      "consequent": [
+        "82482"
+      ],
+      "antecedent_count": 363,
+      "joint_count": 194,
+      "support": 0.026170241467691892,
+      "confidence": 0.5344352617079889,
+      "lift": 11.826174910571112
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "20719"
+      ],
+      "antecedent_count": 396,
+      "joint_count": 188,
+      "support": 0.02536085255631998,
+      "confidence": 0.47474747474747475,
+      "lift": 12.47979797979798
+    },
+    {
+      "antecedent": [
+        "20719"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 282,
+      "joint_count": 188,
+      "support": 0.02536085255631998,
+      "confidence": 0.6666666666666666,
+      "lift": 12.47979797979798
+    },
+    {
+      "antecedent": [
+        "22355"
+      ],
+      "consequent": [
+        "20724"
+      ],
+      "antecedent_count": 297,
+      "joint_count": 182,
+      "support": 0.024551463644948063,
+      "confidence": 0.6127946127946128,
+      "lift": 11.47132945617794
+    },
+    {
+      "antecedent": [
+        "20724"
+      ],
+      "consequent": [
+        "22355"
+      ],
+      "antecedent_count": 396,
+      "joint_count": 182,
+      "support": 0.024551463644948063,
+      "confidence": 0.4595959595959596,
+      "lift": 11.47132945617794
+    },
+    {
+      "antecedent": [
+        "22112"
+      ],
+      "consequent": [
+        "22114"
+      ],
+      "antecedent_count": 510,
+      "joint_count": 269,
+      "support": 0.03628760285984082,
+      "confidence": 0.5274509803921569,
+      "lift": 7.71201995591136
+    },
+    {
+      "antecedent": [
+        "22114"
+      ],
+      "consequent": [
+        "22112"
+      ],
+      "antecedent_count": 507,
+      "joint_count": 269,
+      "support": 0.03628760285984082,
+      "confidence": 0.5305719921104537,
+      "lift": 7.71201995591136
+    },
+    {
+      "antecedent": [
+        "21231"
+      ],
+      "consequent": [
+        "21232"
+      ],
+      "antecedent_count": 174,
+      "joint_count": 116,
+      "support": 0.015648185619857008,
+      "confidence": 0.6666666666666666,
+      "lift": 18.50936329588015
+    },
+    {
+      "antecedent": [
+        "21232"
+      ],
+      "consequent": [
+        "21231"
+      ],
+      "antecedent_count": 267,
+      "joint_count": 116,
+      "support": 0.015648185619857008,
+      "confidence": 0.4344569288389513,
+      "lift": 18.50936329588015
+    },
+    {
+      "antecedent": [
+        "22469"
+      ],
+      "consequent": [
+        "22470"
+      ],
+      "antecedent_count": 392,
+      "joint_count": 136,
+      "support": 0.01834614865776339,
+      "confidence": 0.3469387755102041,
+      "lift": 7.987133984028394
+    },
+    {
+      "antecedent": [
+        "22470"
+      ],
+      "consequent": [
+        "22469"
+      ],
+      "antecedent_count": 322,
+      "joint_count": 136,
+      "support": 0.01834614865776339,
+      "confidence": 0.422360248447205,
+      "lift": 7.987133984028395
+    },
+    {
+      "antecedent": [
+        "22382"
+      ],
+      "consequent": [
+        "22383"
+      ],
+      "antecedent_count": 427,
+      "joint_count": 190,
+      "support": 0.025630648860110617,
+      "confidence": 0.4449648711943794,
+      "lift": 8.006127646028967
+    },
+    {
+      "antecedent": [
+        "22383"
+      ],
+      "consequent": [
+        "22382"
+      ],
+      "antecedent_count": 412,
+      "joint_count": 190,
+      "support": 0.025630648860110617,
+      "confidence": 0.46116504854368934,
+      "lift": 8.006127646028967
+    },
+    {
+      "antecedent": [
+        "21754"
+      ],
+      "consequent": [
+        "21755"
+      ],
+      "antecedent_count": 210,
+      "joint_count": 78,
+      "support": 0.010522055847834885,
+      "confidence": 0.37142857142857144,
+      "lift": 16.196470588235293
+    },
+    {
+      "antecedent": [
+        "21755"
+      ],
+      "consequent": [
+        "21754"
+      ],
+      "antecedent_count": 170,
+      "joint_count": 78,
+      "support": 0.010522055847834885,
+      "confidence": 0.4588235294117647,
+      "lift": 16.196470588235293
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "22382"
+      ],
+      "antecedent_count": 343,
+      "joint_count": 126,
+      "support": 0.0169971671388102,
+      "confidence": 0.3673469387755102,
+      "lift": 6.377383740381399
+    },
+    {
+      "antecedent": [
+        "22382"
+      ],
+      "consequent": [
+        "22384"
+      ],
+      "antecedent_count": 427,
+      "joint_count": 126,
+      "support": 0.0169971671388102,
+      "confidence": 0.29508196721311475,
+      "lift": 6.377383740381398
+    },
+    {
+      "antecedent": [
+        "84992"
+      ],
+      "consequent": [
+        "84991"
+      ],
+      "antecedent_count": 204,
+      "joint_count": 102,
+      "support": 0.013759611493322542,
+      "confidence": 0.5,
+      "lift": 15.067073170731707
+    },
+    {
+      "antecedent": [
+        "21977"
+      ],
+      "consequent": [
+        "84991"
+      ],
+      "antecedent_count": 262,
+      "joint_count": 112,
+      "support": 0.015108593012275733,
+      "confidence": 0.42748091603053434,
+      "lift": 12.881772481846955
+    },
+    {
+      "antecedent": [
+        "84991"
+      ],
+      "consequent": [
+        "21977"
+      ],
+      "antecedent_count": 246,
+      "joint_count": 112,
+      "support": 0.015108593012275733,
+      "confidence": 0.45528455284552843,
+      "lift": 12.881772481846957
+    },
+    {
+      "antecedent": [
+        "20728"
+      ],
+      "consequent": [
+        "22383"
+      ],
+      "antecedent_count": 385,
+      "joint_count": 176,
+      "support": 0.02374207473357615,
+      "confidence": 0.45714285714285713,
+      "lift": 8.225242718446601
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "20727"
+      ],
+      "antecedent_count": 343,
+      "joint_count": 183,
+      "support": 0.024686361796843383,
+      "confidence": 0.5335276967930029,
+      "lift": 8.274143967210316
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "22383"
+      ],
+      "antecedent_count": 343,
+      "joint_count": 146,
+      "support": 0.01969513017671658,
+      "confidence": 0.42565597667638483,
+      "lift": 7.6587081434515545
+    },
+    {
+      "antecedent": [
+        "20726"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 344,
+      "joint_count": 167,
+      "support": 0.022527991366518278,
+      "confidence": 0.48546511627906974,
+      "lift": 7.25555021567892
+    },
+    {
+      "antecedent": [
+        "85099F"
+      ],
+      "consequent": [
+        "21931"
+      ],
+      "antecedent_count": 253,
+      "joint_count": 98,
+      "support": 0.013220018885741265,
+      "confidence": 0.38735177865612647,
+      "lift": 7.932151202148799
+    },
+    {
+      "antecedent": [
+        "22384"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 343,
+      "joint_count": 186,
+      "support": 0.02509105625252934,
+      "confidence": 0.5422740524781341,
+      "lift": 8.104591836734695
+    },
+    {
+      "antecedent": [
+        "20728"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 385,
+      "joint_count": 174,
+      "support": 0.023472278429785512,
+      "confidence": 0.45194805194805193,
+      "lift": 6.754618768328446
+    },
+    {
+      "antecedent": [
+        "21977"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "antecedent_count": 262,
+      "joint_count": 134,
+      "support": 0.01807635235397275,
+      "confidence": 0.5114503816793893,
+      "lift": 8.96307725623951
+    },
+    {
+      "antecedent": [
+        "21975"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "antecedent_count": 198,
+      "joint_count": 107,
+      "support": 0.014434102252799137,
+      "confidence": 0.5404040404040404,
+      "lift": 9.470484991761587
+    },
+    {
+      "antecedent": [
+        "21213"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "antecedent_count": 251,
+      "joint_count": 137,
+      "support": 0.01848104680965871,
+      "confidence": 0.545816733067729,
+      "lift": 9.565341470995449
+    },
+    {
+      "antecedent": [
+        "20727"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 478,
+      "joint_count": 232,
+      "support": 0.031296371239714016,
+      "confidence": 0.48535564853556484,
+      "lift": 7.253914158455933
+    },
+    {
+      "antecedent": [
+        "85099F"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 253,
+      "joint_count": 177,
+      "support": 0.02387697288547147,
+      "confidence": 0.6996047430830039,
+      "lift": 7.10434241160864
+    },
+    {
+      "antecedent": [
+        "21212"
+      ],
+      "consequent": [
+        "84991"
+      ],
+      "antecedent_count": 423,
+      "joint_count": 130,
+      "support": 0.017536759746391475,
+      "confidence": 0.3073286052009456,
+      "lift": 9.261085164043129
+    },
+    {
+      "antecedent": [
+        "84991"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "antecedent_count": 246,
+      "joint_count": 130,
+      "support": 0.017536759746391475,
+      "confidence": 0.5284552845528455,
+      "lift": 9.261085164043129
+    },
+    {
+      "antecedent": [
+        "84992"
+      ],
+      "consequent": [
+        "21212"
+      ],
+      "antecedent_count": 204,
+      "joint_count": 96,
+      "support": 0.012950222581950627,
+      "confidence": 0.47058823529411764,
+      "lift": 8.24697538589904
+    },
+    {
+      "antecedent": [
+        "22383"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 412,
+      "joint_count": 214,
+      "support": 0.028868204505598273,
+      "confidence": 0.5194174757281553,
+      "lift": 7.762987394300032
+    },
+    {
+      "antecedent": [
+        "20713"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 242,
+      "joint_count": 139,
+      "support": 0.018750843113449347,
+      "confidence": 0.5743801652892562,
+      "lift": 5.832712555190762
+    },
+    {
+      "antecedent": [
+        "22386"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 377,
+      "joint_count": 255,
+      "support": 0.03439902873330635,
+      "confidence": 0.6763925729442971,
+      "lift": 6.868627593474074
+    },
+    {
+      "antecedent": [
+        "22382"
+      ],
+      "consequent": [
+        "20725"
+      ],
+      "antecedent_count": 427,
+      "joint_count": 188,
+      "support": 0.02536085255631998,
+      "confidence": 0.44028103044496486,
+      "lift": 6.580248545742993
+    },
+    {
+      "antecedent": [
+        "85099C"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 301,
+      "joint_count": 185,
+      "support": 0.02495615810063402,
+      "confidence": 0.6146179401993356,
+      "lift": 6.241318891366677
+    },
+    {
+      "antecedent": [
+        "21928"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 255,
+      "joint_count": 168,
+      "support": 0.0226628895184136,
+      "confidence": 0.6588235294117647,
+      "lift": 6.690217566478646
+    },
+    {
+      "antecedent": [
+        "21931"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 362,
+      "joint_count": 234,
+      "support": 0.03156616754350466,
+      "confidence": 0.6464088397790055,
+      "lift": 6.5641489442216
+    },
+    {
+      "antecedent": [
+        "22411"
+      ],
+      "consequent": [
+        "85099B"
+      ],
+      "antecedent_count": 378,
+      "joint_count": 211,
+      "support": 0.028463510049912315,
+      "confidence": 0.5582010582010583,
+      "lift": 5.668417047184171
+    },
+    {
+      "antecedent": [
+        "21733"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "antecedent_count": 279,
+      "joint_count": 181,
+      "support": 0.024416565493052746,
+      "confidence": 0.6487455197132617,
+      "lift": 7.537853507263963
+    },
+    {
+      "antecedent": [
+        "82482"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "antecedent_count": 335,
+      "joint_count": 91,
+      "support": 0.012275731822474031,
+      "confidence": 0.2716417910447761,
+      "lift": 3.1562391802741776
+    },
+    {
+      "antecedent": [
+        "82494L"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "antecedent_count": 363,
+      "joint_count": 94,
+      "support": 0.01268042627815999,
+      "confidence": 0.25895316804407714,
+      "lift": 3.008808518355398
+    },
+    {
+      "antecedent": [
+        "21755"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "antecedent_count": 170,
+      "joint_count": 46,
+      "support": 0.006205314987184676,
+      "confidence": 0.27058823529411763,
+      "lift": 3.143997787202655
+    },
+    {
+      "antecedent": [
+        "22470"
+      ],
+      "consequent": [
+        "85123A"
+      ],
+      "antecedent_count": 322,
+      "joint_count": 92,
+      "support": 0.012410629974369352,
+      "confidence": 0.2857142857142857,
+      "lift": 3.31974921630094
+    }
+  ],
+  "product_descriptions": {
+    "15036": "ASSORTED COLOURS SILK FAN",
+    "15056BL": "EDWARDIAN PARASOL BLACK",
+    "15056N": "EDWARDIAN PARASOL NATURAL",
+    "20676": "RED SPOTTY BOWL",
+    "20677": "PINK SPOTTY BOWL",
+    "20685": "RED SPOTTY COIR DOORMAT",
+    "20711": "JUMBO BAG TOYS",
+    "20712": "JUMBO BAG WOODLAND ANIMALS",
+    "20713": "JUMBO BAG OWLS",
+    "20718": "RED SPOTTY SHOPPER BAG",
+    "20719": "WOODLAND CHARLOTTE BAG",
+    "20723": "STRAWBERRY CHARLOTTE BAG",
+    "20724": "RED SPOTTY CHARLOTTE BAG",
+    "20725": "LUNCH BAG RED SPOTTY",
+    "20726": "LUNCH BAG WOODLAND",
+    "20727": "LUNCH BAG  BLACK SKULL.",
+    "20728": "LUNCH BAG CARS BLUE",
+    "20750": "RED/WHITE DOT MINI CASES",
+    "20754": "RETRO RED SPOTTY WASHING UP GLOVES",
+    "20914": "SET/5 RED SPOTTY LID GLASS BOWLS",
+    "20971": "PINK BLUE FELT CRAFT TRINKET BOX",
+    "20972": "PINK CREAM FELT CRAFT TRINKET BOX",
+    "20974": "12 PENCILS SMALL TUBE SKULL",
+    "20975": "12 PENCILS SMALL TUBE RED SPOTTY",
+    "21034": "REX CASH+CARRY JUMBO SHOPPER",
+    "21035": "SET/2 RED SPOTTY TEA TOWELS",
+    "21078": "SET/20 STRAWBERRY PAPER NAPKINS",
+    "21080": "SET/20 RED SPOTTY PAPER NAPKINS",
+    "21086": "SET/6 RED SPOTTY PAPER CUPS",
+    "21094": "SET/6 RED SPOTTY PAPER PLATES",
+    "21121": "SET/10 RED SPOTTY PARTY CANDLES",
+    "21122": "SET/10 PINK SPOTTY PARTY CANDLES",
+    "21154": "RED SPOTTY OVEN GLOVE",
+    "21155": "RED SPOTTY PEG BAG",
+    "21156": "RED SPOTTY CHILDS APRON",
+    "21164": "HOME SWEET HOME METAL SIGN",
+    "21165": "BEWARE OF THE CAT METAL SIGN",
+    "21166": "COOK WITH WINE METAL SIGN",
+    "21172": "PARTY METAL SIGN",
+    "21174": "POTTERING IN THE SHED METAL SIGN",
+    "21175": "GIN + TONIC DIET METAL SIGN",
+    "21181": "PLEASE ONE PERSON  METAL SIGN",
+    "21210": "SET OF 72 RETRO SPOT PAPER  DOILIES",
+    "21212": "PACK OF 72 RETRO SPOT CAKE CASES",
+    "21213": "PACK OF 72 SKULL CAKE CASES",
+    "21216": "SET 3 RED SPOT TIN TEA,COFFEE,SUGAR",
+    "21217": "RED SPOTTY ROUND CAKE TINS",
+    "21218": "RED SPOTTY BISCUIT TIN",
+    "21231": "SWEETHEART CERAMIC TRINKET BOX",
+    "21232": "STRAWBERRY CERAMIC TRINKET BOX",
+    "21238": "RED SPOTTY CUP",
+    "21239": "PINK  SPOTTY CUP",
+    "21240": "BLUE  SPOTTY CUP",
+    "21314": "SMALL GLASS HEART TRINKET POT",
+    "21429": "RED GINGHAM ROSE JEWELLERY BOX",
+    "21479": "WHITE SKULL HOT WATER BOTTLE",
+    "21481": "FAWN BLUE HOT WATER BOTTLE",
+    "21484": "CHICK GREY HOT WATER BOTTLE",
+    "21485": "RED SPOT HEART HOT WATER BOTTLE",
+    "21498": "RED SPOTS  WRAP",
+    "21523": "FANCY FONT HOME SWEET HOME DOORMAT",
+    "21524": "SPOTTY  HOME SWEET HOME DOORMAT",
+    "21527": "RETRO SPOT TRADITIONAL TEAPOT",
+    "21531": "RETRO SPOT SUGAR JAM BOWL",
+    "21533": "RETRO SPOT LARGE MILK JUG",
+    "21535": "RETRO SPOT SMALL MILK JUG",
+    "21539": "RETRO SPOTS BUTTER DISH",
+    "21559": "STRAWBERRY LUNCHBOX WITH CUTLERY",
+    "21621": "VINTAGE UNION JACK BUNTING",
+    "21622": "VINTAGE UNION JACK CUSHION COVER",
+    "21668": "RED STRIPE CERAMIC DRAWER KNOB",
+    "21670": "BLUE SPOT CERAMIC DRAWER KNOB",
+    "21672": "WHITE SPOT RED CERAMIC DRAWER KNOB",
+    "21673": "WHITE SPOT BLUE CERAMIC DRAWER KNOB",
+    "21731": "RED TOADSTOOL LED NIGHT LIGHT",
+    "21733": "RED HANGING HEART T-LIGHT HOLDER",
+    "21754": "HOME BUILDING BLOCK WORD",
+    "21755": "LOVE BUILDING BLOCK WORD",
+    "21790": "VINTAGE SNAP CARDS",
+    "21791": "VINTAGE HEADS AND TAILS CARD GAME",
+    "21843": "RETRO SPOT CAKE STAND",
+    "21868": "POTTING SHED TEA MUG",
+    "21870": "I CAN ONLY PLEASE ONE PERSON MUG",
+    "21871": "SAVE THE PLANET MUG",
+    "21877": "HOME SWEET HOME MUG",
+    "21888": "BINGO SET",
+    "21889": "WOODEN BOX OF DOMINOES",
+    "21891": "TRADITIONAL WOODEN SKIPPING ROPE",
+    "21892": "TRADITIONAL WOODEN CATCH CUP GAME",
+    "21900": "KEY FOB , SHED",
+    "21907": "I'M ON HOLIDAY METAL SIGN",
+    "21908": "CHOCOLATE THIS WAY METAL SIGN",
+    "21912": "VINTAGE SNAKES & LADDERS",
+    "21915": "RED  HARMONICA IN BOX",
+    "21918": "SET 12 KIDS COLOUR  CHALK STICKS",
+    "21928": "JUMBO BAG SCANDINAVIAN PAISLEY",
+    "21929": "JUMBO BAG PINK VINTAGE PAISLEY",
+    "21930": "JUMBO STORAGE BAG SKULLS",
+    "21931": "JUMBO STORAGE BAG SUKI",
+    "21935": "SUKI  SHOULDER BAG",
+    "21936": "RED/WHITE SPOT PICNIC BAG",
+    "21955": "UNION JACK GUNS & ROSES  DOORMAT",
+    "21974": "SET OF 36 PAISLEY FLOWER DOILIES",
+    "21975": "PACK OF 60 DINOSAUR CAKE CASES",
+    "21976": "PACK OF 60 MUSHROOM CAKE CASES",
+    "21977": "PACK OF 60 PINK PAISLEY CAKE CASES",
+    "21985": "PACK OF 12 HEARTS DESIGN TISSUES",
+    "22027": "TEA PARTY BIRTHDAY CARD",
+    "22029": "SPACE BOY BIRTHDAY CARD",
+    "22055": "MINI CAKE STAND  HANGING STRAWBERY",
+    "22064": "PINK DOUGHNUT TRINKET POT",
+    "22077": "6 RIBBONS RUSTIC CHARM",
+    "22082": "RIBBON REEL STRIPES DESIGN",
+    "22083": "PAPER CHAIN KIT RETRO SPOT",
+    "22084": "PAPER CHAIN KIT EMPIRE",
+    "22086": "PAPER CHAIN KIT 50'S CHRISTMAS",
+    "22087": "PAPER BUNTING WHITE LACE",
+    "22090": "PAPER BUNTING RETRO SPOTS",
+    "22111": "SCOTTIE DOG HOT WATER BOTTLE",
+    "22112": "CHOCOLATE HOT WATER BOTTLE",
+    "22113": "GREY HEART HOT WATER BOTTLE",
+    "22114": "HOT WATER BOTTLE TEA AND SYMPATHY",
+    "22131": "FOOD CONTAINER SET 3 LOVE HEART",
+    "22138": "BAKING SET 9 PIECE RETROSPOT",
+    "22139": "RETRO SPOT TEA SET CERAMIC 11 PC",
+    "22147": "FELTCRAFT BUTTERFLY HEARTS",
+    "22149": "FELTCRAFT 6 FLOWER FRIENDS",
+    "22150": "3 STRIPEY MICE FELTCRAFT",
+    "22151": "PLACE SETTING WHITE HEART",
+    "22173": "METAL 4 HOOK HANGER FRENCH CHATEAU",
+    "22178": "VICTORIAN GLASS HANGING T-LIGHT",
+    "22189": "CREAM HEART CARD HOLDER",
+    "22195": "HEART MEASURING SPOONS LARGE",
+    "22196": "SMALL HEART MEASURING SPOONS",
+    "22197": "POPCORN HOLDER , SMALL",
+    "22198": "POPCORN HOLDER , LARGE",
+    "22212": "FOUR HOOK  WHITE LOVEBIRDS",
+    "22219": "LOVEBIRD HANGING DECORATION WHITE",
+    "22271": "FELTCRAFT DOLL ROSIE",
+    "22273": "FELTCRAFT DOLL MOLLY",
+    "22294": "HEART FILIGREE DOVE  SMALL",
+    "22295": "HEART FILIGREE DOVE LARGE",
+    "22296": "HEART IVORY TRELLIS LARGE",
+    "22297": "HEART IVORY TRELLIS SMALL",
+    "22301": "COFFEE MUG CAT + BIRD DESIGN",
+    "22326": "ROUND SNACK BOXES ,SET4, WOODLAND",
+    "22328": "ROUND SNACK BOXES ,SET 4, FRUITS",
+    "22348": "TEA BAG PLATE RED SPOTTY",
+    "22352": "LUNCHBOX WITH CUTLERY RETROSPOT",
+    "22353": "LUNCHBOX WITH CUTLERY FAIRY CAKES",
+    "22355": "CHARLOTTE BAG , SUKI DESIGN",
+    "22356": "CHARLOTTE BAG , PINK/WHITE SPOTS",
+    "22367": "CHILDS APRON SPACEBOY DESIGN",
+    "22379": "RECYCLING BAG RETROSPOT",
+    "22381": "TOY TIDY PINK RETROSPOT",
+    "22382": "LUNCHBAG SPACEBOY DESIGN",
+    "22383": "LUNCHBAG SUKI  DESIGN",
+    "22384": "LUNCHBAG PINK RETROSPOT",
+    "22385": "JUMBO BAG SPACEBOY DESIGN",
+    "22386": "JUMBO BAG PINK WITH WHITE SPOTS",
+    "22411": "JUMBO SHOPPER VINTAGE RED PAISLEY",
+    "22413": "METAL SIGN TAKE IT OR LEAVE IT",
+    "22417": "PACK OF 60 SPACEBOY CAKE CASES",
+    "22423": "REGENCY CAKESTAND 3 TIER",
+    "22457": "NATURAL SLATE HEART CHALKBOARD",
+    "22464": "HANGING METAL HEART LANTERN",
+    "22467": "GUMBALL COAT RACK",
+    "22469": "HEART OF WICKER SMALL",
+    "22470": "HEART OF WICKER LARGE",
+    "22487": "WHITE WOOD GARDEN PLANT LADDER",
+    "22502": "PICNIC BASKET WICKER SMALL",
+    "22505": "MEMO BOARD COTTAGE DESIGN",
+    "22507": "MEMO BOARD RETROSPOT  DESIGN",
+    "22508": "DOORSTOP RETROSPOT HEART",
+    "22528": "GARDENERS KNEELING PAD",
+    "22551": "PLASTERS IN TIN SPACEBOY",
+    "22553": "PLASTERS IN TIN SKULLS",
+    "22554": "PLASTERS IN TIN WOODLAND ANIMALS",
+    "22555": "PLASTERS IN TIN STRONGMAN",
+    "22556": "PLASTERS IN TIN CIRCUS PARADE",
+    "22557": "PLASTERS IN TIN VINTAGE PAISLEY",
+    "22558": "CLOTHES PEGS RETROSPOT PACK 24",
+    "22561": "WOODEN SCHOOL COLOURING SET",
+    "22568": "FELTCRAFT CUSHION OWL",
+    "22569": "FELTCRAFT CUSHION BUTTERFLY",
+    "22570": "FELTCRAFT CUSHION RABBIT",
+    "22585": "PACK OF 6 BIRDY GIFT TAGS",
+    "22617": "BAKING SET SPACEBOY DESIGN",
+    "22624": "IVORY KITCHEN SCALES",
+    "22625": "RED KITCHEN SCALES",
+    "22629": "SPACEBOY LUNCH BOX",
+    "22630": "DOLLY GIRL LUNCH BOX",
+    "22632": "HAND WARMER RED POLKA DOT",
+    "22646": "CERAMIC STRAWBERRY CAKE MONEY BANK",
+    "22652": "TRAVEL SEWING KIT",
+    "22659": "LUNCHBOX I LOVE LONDON",
+    "22665": "RECIPE BOX BLUE SKETCHBOOK DESIGN",
+    "22666": "RECIPE BOX PANTRY YELLOW DESIGN",
+    "22667": "RECIPE BOX RETRO SPOT DESIGN",
+    "22694": "WICKER STAR",
+    "22697": "GREEN REGENCY TEACUP AND SAUCER",
+    "22699": "ROSES REGENCY TEACUP AND SAUCER",
+    "22726": "ALARM CLOCK BAKELIKE GREEN",
+    "22727": "ALARM CLOCK BAKELIKE RED",
+    "22759": "SET OF 3 NOTEBOOKS IN PARCEL",
+    "22835": "HOT WATER BOTTLE I AM SO POORLY",
+    "22865": "HAND WARMER OWL DESIGN",
+    "22866": "HAND WARMER SCOTTY DOG DESIGN",
+    "22867": "HAND WARMER BIRD DESIGN",
+    "22909": "SET OF 20 VINTAGE CHRISTMAS NAPKINS",
+    "22910": "PAPER CHAIN KIT VINTAGE CHRISTMAS",
+    "22952": "72 CAKE CASES VINTAGE CHRISTMAS",
+    "37503": "TEA TIME CAKE STAND IN GIFT BOX",
+    "47559B": "TEA TIME OVEN GLOVE",
+    "47566": "PARTY BUNTING",
+    "47590B": "PINK HAPPY BIRTHDAY BUNTING",
+    "47591D": "PINK FAIRY CAKE CHILD'S APRON",
+    "48111": "DOOR MAT 3 SMILEY CATS",
+    "48138": "DOOR MAT UNION FLAG",
+    "48184": "DOOR MAT ENGLISH ROSE",
+    "48185": "DOOR MAT FAIRY CAKE",
+    "48187": "DOOR MAT NEW ENGLAND",
+    "48188": "DOOR MAT WELCOME PUPPIES",
+    "48194": "DOORMAT HEARTS",
+    "71459": "HANGING JAM JAR T-LIGHT HOLDER",
+    "71477": "COLOUR GLASS. STAR T-LIGHT HOLDER",
+    "72741": "GRAND CHOCOLATECANDLE",
+    "79321": "CHILLI LIGHTS",
+    "82482": "WOODEN PICTURE FRAME WHITE FINISH",
+    "82483": "WOOD 2 DRAWER CABINET WHITE FINISH",
+    "82484": "WOOD BLACK BOARD ANT WHITE FINISH",
+    "82486": "WOOD S/3 CABINET ANT WHITE FINISH",
+    "82494L": "WOODEN FRAME ANTIQUE WHITE",
+    "82551": "LAUNDRY 15C METAL SIGN",
+    "82552": "WASHROOM METAL SIGN",
+    "82580": "BATHROOM METAL SIGN",
+    "82581": "TOILET METAL SIGN",
+    "82583": "HOT BATHS METAL SIGN",
+    "82600": "NO SINGING METAL SIGN",
+    "84029E": "RED WOOLLY HOTTIE WHITE HEART.",
+    "84029G": "KNITTED UNION FLAG HOT WATER BOTTLE",
+    "84050": "PINK HEART SHAPE EGG FRYING PAN",
+    "84077": "WORLD WAR 2 GLIDERS ASSTD DESIGNS",
+    "84270": "ASSTD DESIGN BUBBLE GUM RING",
+    "84378": "SET OF 3 HEART COOKIE CUTTERS",
+    "84380": "SET OF 3 BUTTERFLY COOKIE CUTTERS",
+    "84406B": "CREAM CUPID HEARTS COAT HANGER",
+    "84520B": "PACK 20 ENGLISH ROSE PAPER NAPKINS",
+    "84692": "BOX OF 24 COCKTAIL PARASOLS",
+    "84755": "COLOUR GLASS T-LIGHT HOLDER HANGING",
+    "84836": "ZINC METAL HEART DECORATION",
+    "84879": "ASSORTED COLOUR BIRD ORNAMENT",
+    "84946": "ANTIQUE SILVER TEA GLASS ETCHED",
+    "84949": "SILVER HANGING T-LIGHT HOLDER",
+    "84970L": "SINGLE HEART ZINC T-LIGHT HOLDER",
+    "84970S": "HANGING HEART ZINC T-LIGHT HOLDER",
+    "84978": "HANGING HEART JAR T-LIGHT HOLDER",
+    "84987": "SET OF 36 TEATIME PAPER DOILIES",
+    "84988": "SET OF 72 PINK HEART PAPER DOILIES",
+    "84991": "60 TEATIME FAIRY CAKE CASES",
+    "84992": "72 SWEETHEART FAIRY CAKE CASES",
+    "84997B": "RED 3 PIECE MINI DOTS CUTLERY SET",
+    "84997C": "BLUE 3 PIECE MINI DOTS CUTLERY SET",
+    "84997D": "PINK 3 PIECE MINI DOTS CUTLERY SET",
+    "85014B": "RED/WHITE DOTS RUFFLED UMBRELLA",
+    "85049E": "SCANDINAVIAN REDS RIBBONS",
+    "85066": "CREAM SWEETHEART MINI CHEST",
+    "85099B": "JUMBO BAG RED WHITE SPOTTY",
+    "85099C": "JUMBO  BAG BAROQUE BLACK WHITE",
+    "85099F": "JUMBO BAG STRAWBERRY",
+    "85123A": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "85150": "LADIES & GENTLEMEN METAL SIGN",
+    "85152": "HAND OVER THE CHOCOLATE   SIGN",
+    "85232B": "SET/3 RUSSIAN DOLL STACKING TINS"
+  }
+}
